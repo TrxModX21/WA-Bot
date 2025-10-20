@@ -1,0 +1,123 @@
+import fs from "fs";
+import makeWASocket, {
+  useMultiFileAuthState,
+  DisconnectReason,
+  makeCacheableSignalKeyStore,
+} from "baileys";
+import qrcode from "qrcode-terminal";
+
+// Load data produk dari file JSON
+const products = JSON.parse(fs.readFileSync("./products.json", "utf-8"));
+
+async function startBot() {
+  const { state, saveCreds } = await useMultiFileAuthState("session");
+
+  const sock = makeWASocket({
+    printQRInTerminal: false,
+    auth: {
+      creds: state.creds,
+      keys: makeCacheableSignalKeyStore(state.keys, null),
+    },
+    browser: ["Bot WhatsApp", "Chrome", "1.0.0"],
+  });
+
+  sock.ev.on("creds.update", saveCreds);
+
+  sock.ev.on("connection.update", (update) => {
+    const { connection, lastDisconnect, qr } = update;
+
+    if (qr) {
+      console.log("\n=== Scan QR Code berikut di WhatsApp Web ===\n");
+      qrcode.generate(qr, { small: true });
+    }
+
+    if (connection === "close") {
+      const shouldReconnect =
+        lastDisconnect?.error?.output?.statusCode !== DisconnectReason.loggedOut;
+
+      console.log(
+        "❌ Koneksi terputus. Reconnect:",
+        shouldReconnect ? "Ya" : "Tidak"
+      );
+
+      if (shouldReconnect) startBot();
+    } else if (connection === "open") {
+      console.log("✅ Bot berhasil tersambung ke WhatsApp!");
+    }
+  });
+
+  sock.ev.on("messages.upsert", async (m) => {
+    const msg = m.messages[0];
+    if (!msg.message || msg.key.fromMe) return;
+
+    const from = msg.key.remoteJid;
+    const isGroup = from.endsWith("@g.us");
+    const sender = isGroup ? msg.key.participant : from;
+
+    const text =
+      msg.message.conversation ||
+      msg.message.extendedTextMessage?.text ||
+      "";
+
+    if (!text.trim()) return;
+
+    console.log(
+      `📩 Pesan dari ${isGroup ? "grup" : "personal"} ${from}: ${text}`
+    );
+
+    if (isGroup) {
+      await handleGroupMessage(sock, from, sender, text);
+    } else {
+      await handlePrivateMessage(sock, from, text);
+    }
+  });
+}
+
+async function handleGroupMessage(sock, from, sender, text) {
+  const lower = text.toLowerCase();
+
+  if (lower === "!menu") {
+    const list = Object.keys(products)
+      .map((key) => `• *${products[key].title}* — ketik *${key}*`)
+      .join("\n");
+    await sock.sendMessage(from, {
+      text: `📋 *Menu Produk Tersedia:*\n\n${list}\n\nKetik nama produk untuk info lengkap.`,
+    });
+  } else if (products[lower]) {
+    const p = products[lower];
+    const plans = p.plans
+      .map((plan) => `- ${plan.duration} : *${plan.price}*`)
+      .join("\n");
+    const notes = p.notes.map((n) => `• ${n}`).join("\n");
+
+    await sock.sendMessage(from, {
+      text: `${p.title}\n\n${p.description}\n\n${plans}\n\n${notes}`,
+    });
+  } else if (lower === "!ping") {
+    await sock.sendMessage(from, { text: "🏓 Pong dari grup!" });
+  }
+}
+
+async function handlePrivateMessage(sock, from, text) {
+  const lower = text.toLowerCase();
+
+  if (lower === "halo") {
+    await sock.sendMessage(from, {
+      text: "Hai 👋, ini bot otomatis! Ketik *!menu* untuk melihat daftar produk.",
+    });
+  } else if (products[lower]) {
+    const p = products[lower];
+    const plans = p.plans
+      .map((plan) => `- ${plan.duration} : *${plan.price}*`)
+      .join("\n");
+    const notes = p.notes.map((n) => `• ${n}`).join("\n");
+
+    await sock.sendMessage(from, {
+      text: `${p.title}\n\n${p.description}\n\n${plans}\n\n${notes}`,
+    });
+  } else if (lower === "ping") {
+    await sock.sendMessage(from, { text: "Pong 🏓" });
+  }
+}
+
+startBot().catch((err) => console.error("Gagal menjalankan bot:", err));

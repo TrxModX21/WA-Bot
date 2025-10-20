@@ -1,0 +1,29 @@
+{
+    "youtube": {
+      "title": "🎵 YouTube Premium",
+      "description": "Langganan hemat untuk YouTube Premium dan YouTube Music tanpa iklan 🎧",
+      "plans": [
+        { "duration": "1 Bulan", "price": "Rp 20.000" },
+        { "duration": "2 Bulan", "price": "Rp 35.000" }
+      ],
+      "notes": [
+        "Via Invite Family Pro",
+        "Bisa pakai email sendiri",
+        "Sudah termasuk YouTube Music Premium"
+      ]
+    },
+    "spotify": {
+      "title": "🎶 Spotify Premium",
+      "description": "Akses musik tanpa batas dan tanpa iklan",
+      "plans": [
+        { "duration": "1 Bulan", "price": "Rp 15.000" },
+        { "duration": "3 Bulan", "price": "Rp 40.000" }
+      ],
+      "notes": [
+        "Akun legal & bisa perpanjang",
+        "Kualitas audio tinggi",
+        "Akses di semua perangkat"
+      ]
+    }
+  }
+  
