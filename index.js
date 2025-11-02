@@ -6,6 +6,8 @@ import makeWASocket, {
 } from "baileys";
 import qrcode from "qrcode-terminal";
 
+const delay = (ms = 3000) => new Promise((res) => setTimeout(res, ms));
+
 // Load data produk dari file JSON
 const products = JSON.parse(fs.readFileSync("./products.json", "utf-8"));
 
@@ -80,6 +82,8 @@ async function handleGroupMessage(sock, from, sender, text) {
     const list = Object.keys(products)
       .map((key) => `• *${products[key].title}* — ketik *${key}*`)
       .join("\n");
+
+    await delay();
     await sock.sendMessage(from, {
       text: `📋 *Menu Produk Tersedia:*\n\n${list}\n\nKetik nama produk untuk info lengkap.`,
     });
@@ -90,10 +94,12 @@ async function handleGroupMessage(sock, from, sender, text) {
       .join("\n");
     const notes = p.notes.map((n) => `• ${n}`).join("\n");
 
+    await delay();
     await sock.sendMessage(from, {
       text: `${p.title}\n\n${p.description}\n\n${plans}\n\n${notes}`,
     });
   } else if (lower === "!ping") {
+    await delay();
     await sock.sendMessage(from, { text: "🏓 Pong dari grup!" });
   }
 }
@@ -102,8 +108,18 @@ async function handlePrivateMessage(sock, from, text) {
   const lower = text.toLowerCase();
 
   if (lower === "halo") {
+    await delay();
     await sock.sendMessage(from, {
       text: "Hai 👋, ini bot otomatis! Ketik *!menu* untuk melihat daftar produk.",
+    });
+  } else if (lower === "!menu") {
+    const list = Object.keys(products)
+      .map((key) => `• ${products[key].title}`)
+      .join("\n");
+
+    await delay();
+    await sock.sendMessage(from, {
+      text: `📦 *Daftar Produk Kami:*\n\n${list}\n\nKetik nama produk (contoh: *youtube*) untuk lihat detailnya.`,
     });
   } else if (products[lower]) {
     const p = products[lower];
@@ -112,10 +128,12 @@ async function handlePrivateMessage(sock, from, text) {
       .join("\n");
     const notes = p.notes.map((n) => `• ${n}`).join("\n");
 
+    await delay();
     await sock.sendMessage(from, {
       text: `${p.title}\n\n${p.description}\n\n${plans}\n\n${notes}`,
     });
   } else if (lower === "ping") {
+    await delay();
     await sock.sendMessage(from, { text: "Pong 🏓" });
   }
 }
