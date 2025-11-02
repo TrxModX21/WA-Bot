@@ -13,16 +13,17 @@
     ]
   },
   "spotify": {
-    "title": "🎶 Spotify Premium",
+    "title": "🎶 Spotify Premium Private",
     "description": "Akses musik tanpa batas dan tanpa iklan",
     "plans": [
-      { "duration": "1 Bulan", "price": "Rp 15.000" },
-      { "duration": "3 Bulan", "price": "Rp 40.000" }
+      { "duration": "1 Bulan", "price": "Rp 25.000" },
+      { "duration": "2 Bulan", "price": "Rp 45.000" },
+      { "duration": "3 Bulan", "price": "Rp 65.000" }
     ],
     "notes": [
-      "Akun legal & bisa perpanjang",
-      "Kualitas audio tinggi",
-      "Akses di semua perangkat"
+      "Tanpa iklan",
+      "Akun baru(private, bukan sharing)",
+      "Legal & asli dari Spotify(bukan mod)"
     ]
   },
   "capcut": {

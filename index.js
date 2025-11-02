@@ -85,7 +85,7 @@ async function handleGroupMessage(sock, from, sender, text) {
 
     await delay();
     await sock.sendMessage(from, {
-      text: `📋 *Menu Produk Tersedia:*\n\n${list}\n\nKetik nama produk untuk info lengkap.`,
+      text: `📋 *Menu Produk Tersedia:*\n\n${list}\n\nKetik nama produk (contoh: *youtube*) untuk lihat detailnya. Untuk pemesanan bisa langsung hubungi admin 082312300176 (Admin Software Murah)`,
     });
   } else if (products[lower]) {
     const p = products[lower];
@@ -119,7 +119,7 @@ async function handlePrivateMessage(sock, from, text) {
 
     await delay();
     await sock.sendMessage(from, {
-      text: `📦 *Daftar Produk Kami:*\n\n${list}\n\nKetik nama produk (contoh: *youtube*) untuk lihat detailnya.`,
+      text: `📦 *Daftar Produk Kami:*\n\n${list}\n\nKetik nama produk (contoh: *youtube*) untuk lihat detailnya. Untuk pemesanan bisa langsung hubungi admin 082312300176 (Admin Software Murah)`,
     });
   } else if (products[lower]) {
     const p = products[lower];
