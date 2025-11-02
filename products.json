@@ -153,8 +153,8 @@
     "title": "🧠 ChatGPT Premium",
     "description": "Tersedia dua jenis akun: Sharing & Private dengan akses GPT Premium cepat dan stabil.",
     "plans": [
-      { "type": "Akun Sharing", "duration": "1 Bulan", "price": "Rp 20.000" },
-      { "type": "Akun Private", "duration": "1 Bulan", "price": "Rp 55.000" }
+      { "type": "Akun Sharing", "duration": "1 Bulan (Sharing)", "price": "Rp 20.000" },
+      { "type": "Akun Private", "duration": "1 Bulan (Private)", "price": "Rp 55.000" }
     ],
     "notes": [
       "Akun dari seller untuk versi Sharing",
