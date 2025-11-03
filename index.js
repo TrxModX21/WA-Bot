@@ -89,9 +89,26 @@ async function handleGroupMessage(sock, from, sender, text) {
     });
   } else if (products[lower]) {
     const p = products[lower];
-    const plans = p.plans
-      .map((plan) => `- ${plan.duration} : *${plan.price}*`)
-      .join("\n");
+    let plans = "";
+
+    if (p.plans && Array.isArray(p.plans)) {
+      plans = p.plans
+        .map((plan) => {
+          if (plan.details && Array.isArray(plan.details)) {
+            // format untuk TikTok
+            return `*${plan.type}*\n${plan.details.map((d) => `- ${d}`).join("\n")}`;
+          } else if (plan.duration && plan.price) {
+            // format umum
+            return `- ${plan.duration} : *${plan.price}*`;
+          } else if (plan.type && plan.price) {
+            // format seperti CorelDraw / Vidio
+            return `- ${plan.type} : *${plan.price}*`;
+          } else {
+            return ""; // fallback
+          }
+        })
+        .join("\n\n");
+    }
     const notes = p.notes.map((n) => `• ${n}`).join("\n");
 
     await delay();
@@ -123,9 +140,22 @@ async function handlePrivateMessage(sock, from, text) {
     });
   } else if (products[lower]) {
     const p = products[lower];
-    const plans = p.plans
-      .map((plan) => `- ${plan.duration} : *${plan.price}*`)
-      .join("\n");
+    let plans = "";
+    if (p.plans && Array.isArray(p.plans)) {
+      plans = p.plans
+        .map((plan) => {
+          if (plan.details && Array.isArray(plan.details)) {
+            return `*${plan.type}*\n${plan.details.map((d) => `- ${d}`).join("\n")}`;
+          } else if (plan.duration && plan.price) {
+            return `- ${plan.duration} : *${plan.price}*`;
+          } else if (plan.type && plan.price) {
+            return `- ${plan.type} : *${plan.price}*`;
+          } else {
+            return "";
+          }
+        })
+        .join("\n\n");
+    }
     const notes = p.notes.map((n) => `• ${n}`).join("\n");
 
     await delay();
