@@ -107,7 +107,7 @@ async function handleGroupMessage(sock, from, sender, text) {
             return ""; // fallback
           }
         })
-        .join("\n\n");
+        .join("\n");
     }
     const notes = p.notes.map((n) => `• ${n}`).join("\n");
 
@@ -154,7 +154,7 @@ async function handlePrivateMessage(sock, from, text) {
             return "";
           }
         })
-        .join("\n\n");
+        .join("\n");
     }
     const notes = p.notes.map((n) => `• ${n}`).join("\n");
 
