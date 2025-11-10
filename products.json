@@ -3,8 +3,14 @@
     "title": "🎵 YouTube Premium",
     "description": "Langganan hemat untuk YouTube Premium dan YouTube Music tanpa iklan 🎧",
     "plans": [
-      { "duration": "1 Bulan", "price": "Rp 20.000" },
-      { "duration": "2 Bulan", "price": "Rp 35.000" }
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 20.000"
+      },
+      {
+        "duration": "2 Bulan",
+        "price": "Rp 35.000"
+      }
     ],
     "notes": [
       "Via Invite Family Pro",
@@ -16,9 +22,18 @@
     "title": "🎶 Spotify Premium Private",
     "description": "Akses musik tanpa batas dan tanpa iklan",
     "plans": [
-      { "duration": "1 Bulan", "price": "Rp 25.000" },
-      { "duration": "2 Bulan", "price": "Rp 45.000" },
-      { "duration": "3 Bulan", "price": "Rp 65.000" }
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 25.000"
+      },
+      {
+        "duration": "2 Bulan",
+        "price": "Rp 45.000"
+      },
+      {
+        "duration": "3 Bulan",
+        "price": "Rp 65.000"
+      }
     ],
     "notes": [
       "Tanpa iklan",
@@ -30,9 +45,18 @@
     "title": "🎬 CapCut Pro",
     "description": "Untuk iOS, Android, dan PC (Mac & Windows). Versi berkualitas, 100% siap pakai!",
     "plans": [
-      { "duration": "1 Bulan", "price": "Rp 30.000" },
-      { "duration": "3 Bulan", "price": "Rp 70.000" },
-      { "duration": "1 Tahun", "price": "Rp 240.000" }
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 30.000"
+      },
+      {
+        "duration": "3 Bulan",
+        "price": "Rp 70.000"
+      },
+      {
+        "duration": "1 Tahun",
+        "price": "Rp 240.000"
+      }
     ],
     "notes": [
       "Langsung aktif setelah pembayaran",
@@ -43,10 +67,22 @@
     "title": "🎨 Canva Pro Premium",
     "description": "Full fitur • Tanpa batas • Legal & bergaransi",
     "plans": [
-      { "duration": "1 Bulan", "price": "Rp 5.000" },
-      { "duration": "2 Bulan", "price": "Rp 9.000" },
-      { "duration": "3 Bulan", "price": "Rp 14.000" },
-      { "duration": "1 Tahun", "price": "Rp 35.000" }
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 5.000"
+      },
+      {
+        "duration": "2 Bulan",
+        "price": "Rp 9.000"
+      },
+      {
+        "duration": "3 Bulan",
+        "price": "Rp 14.000"
+      },
+      {
+        "duration": "1 Tahun",
+        "price": "Rp 35.000"
+      }
     ],
     "notes": [
       "Langsung aktif setelah pembayaran",
@@ -57,8 +93,14 @@
     "title": "📱 LOKLOK Sharing",
     "description": "Untuk iOS dan Android",
     "plans": [
-      { "duration": "1 Bulan", "price": "Rp 27.000" },
-      { "duration": "2 Bulan", "price": "Rp 50.000" }
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 27.000"
+      },
+      {
+        "duration": "2 Bulan",
+        "price": "Rp 50.000"
+      }
     ],
     "notes": [
       "Akun login seperti biasa",
@@ -70,9 +112,18 @@
     "title": "📺 Netflix Sharing",
     "description": "Region ID • 1 Profil = 1 Pengguna (tanpa VPN) • Anti Hold | Garansi Aktif | Support HD – 4K",
     "plans": [
-      { "duration": "1 Bulan", "price": "Rp 30.000" },
-      { "duration": "2 Bulan", "price": "Rp 50.000" },
-      { "duration": "3 Bulan", "price": "Rp 70.000" }
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 30.000"
+      },
+      {
+        "duration": "2 Bulan",
+        "price": "Rp 50.000"
+      },
+      {
+        "duration": "3 Bulan",
+        "price": "Rp 70.000"
+      }
     ],
     "notes": [
       "Tidak boleh mengganti email/password atau menambah nomor HP",
@@ -84,10 +135,22 @@
     "title": "📸 AlightMotion Private",
     "description": "Share (Private Project)",
     "plans": [
-      { "duration": "1 Bulan", "price": "Rp 15.000" },
-      { "duration": "2 Bulan", "price": "Rp 20.000" },
-      { "duration": "3 Bulan", "price": "Rp 25.000" },
-      { "duration": "1 Tahun", "price": "Rp 65.000" }
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 15.000"
+      },
+      {
+        "duration": "2 Bulan",
+        "price": "Rp 20.000"
+      },
+      {
+        "duration": "3 Bulan",
+        "price": "Rp 25.000"
+      },
+      {
+        "duration": "1 Tahun",
+        "price": "Rp 65.000"
+      }
     ],
     "notes": [
       "Login dengan email",
@@ -99,9 +162,18 @@
     "title": "🎥 Amazon Prime Video",
     "description": "Private Akun untuk streaming film dan series eksklusif Prime Video",
     "plans": [
-      { "duration": "1 Bulan", "price": "Rp 25.000" },
-      { "duration": "2 Bulan", "price": "Rp 45.000" },
-      { "duration": "3 Bulan", "price": "Rp 65.000" }
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 25.000"
+      },
+      {
+        "duration": "2 Bulan",
+        "price": "Rp 45.000"
+      },
+      {
+        "duration": "3 Bulan",
+        "price": "Rp 65.000"
+      }
     ],
     "notes": [
       "Bisa login di 3 device",
@@ -113,7 +185,10 @@
     "title": "☁️ iCloud 2TB (2–3 Bulan)",
     "description": "Penyimpanan cloud premium Apple dengan kapasitas besar dan fitur tambahan eksklusif.",
     "plans": [
-      { "duration": "2–3 Bulan", "price": "Rp 85.000" }
+      {
+        "duration": "2–3 Bulan",
+        "price": "Rp 85.000"
+      }
     ],
     "notes": [
       "Akun pribadi kamu sendiri",
@@ -125,10 +200,22 @@
     "title": "🤖 Blackbox Ai Premium",
     "description": "Akun Sharing",
     "plans": [
-      { "duration": "1 Bulan", "price": "Rp 10.000" },
-      { "duration": "3 Bulan", "price": "Rp 25.000" },
-      { "duration": "6 Bulan", "price": "Rp 35.000" },
-      { "duration": "Lifetime", "price": "Rp 60.000" }
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 10.000"
+      },
+      {
+        "duration": "3 Bulan",
+        "price": "Rp 25.000"
+      },
+      {
+        "duration": "6 Bulan",
+        "price": "Rp 35.000"
+      },
+      {
+        "duration": "Lifetime",
+        "price": "Rp 60.000"
+      }
     ],
     "notes": [
       "Gratis panduan",
@@ -140,9 +227,18 @@
     "title": "🎞️ Bstation Premium",
     "description": "Akun Sharing",
     "plans": [
-      { "duration": "1 Bulan", "price": "Rp 15.000" },
-      { "duration": "3 Bulan", "price": "Rp 30.000" },
-      { "duration": "12 Bulan", "price": "Rp 45.000" }
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 15.000"
+      },
+      {
+        "duration": "3 Bulan",
+        "price": "Rp 30.000"
+      },
+      {
+        "duration": "12 Bulan",
+        "price": "Rp 45.000"
+      }
     ],
     "notes": [
       "Tanpa Iklan",
@@ -153,8 +249,16 @@
     "title": "🧠 ChatGPT Premium",
     "description": "Tersedia dua jenis akun: Sharing & Private dengan akses GPT Premium cepat dan stabil.",
     "plans": [
-      { "type": "Akun Sharing", "duration": "1 Bulan (Sharing)", "price": "Rp 20.000" },
-      { "type": "Akun Private", "duration": "1 Bulan (Private)", "price": "Rp 55.000" }
+      {
+        "type": "Akun Sharing",
+        "duration": "1 Bulan (Sharing)",
+        "price": "Rp 20.000"
+      },
+      {
+        "type": "Akun Private",
+        "duration": "1 Bulan (Private)",
+        "price": "Rp 55.000"
+      }
     ],
     "notes": [
       "Akun dari seller untuk versi Sharing",
@@ -163,10 +267,53 @@
     ]
   },
   "gemini": {
-    "title": "🌌 Gemini Ai Pro + Veo 3 + Gdrive 2TB",
-    "description": "Semi Private • Akses paket kombo Gemini AI dengan Veo 3 dan Google Drive 2TB",
+    "title": "🌌 Gemini Ai Pro\n(BONUS VEO 3 + GDrive 2TB)",
+    "description": "Semi Private • Akses paket Gemini AI Pro dengan Bonus Paket - Veo 3 dan Google Drive 2TB",
     "plans": [
-      { "duration": "1 Bulan", "price": "Rp 20.000" }
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 20.000"
+      },
+      {
+        "duration": "2 Bulan",
+        "price": "Rp 35.000"
+      }
+    ],
+    "notes": [
+      "Akun pribadi",
+      "Via invite family email"
+    ]
+  },
+  "drive": {
+    "title": "📁 GDrive 2TB\n(BONUS VEO 3 + Gemini Ai Pro)",
+    "description": "Semi Private • Akses paket Google Drive 2TB dengan Bonus Paket - Veo 3 dan Gemini Ai Pro",
+    "plans": [
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 20.000"
+      },
+      {
+        "duration": "2 Bulan",
+        "price": "Rp 35.000"
+      }
+    ],
+    "notes": [
+      "Akun pribadi",
+      "Via invite family email"
+    ]
+  }, 
+  "veo": {
+    "title": "🎬 VEO 3\n(BONUS GDrive 2TB + Gemini Ai Pro)",
+    "description": "Semi Private • Akses paket Veo 3 dengan Bonus Paket - Google Drive 2TB dan Gemini Ai Pro",
+    "plans": [
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 20.000"
+      },
+      {
+        "duration": "2 Bulan",
+        "price": "Rp 35.000"
+      }
     ],
     "notes": [
       "Akun pribadi",
@@ -177,7 +324,10 @@
     "title": "🎨 Leonardo Ai Premium",
     "description": "Akun Sharing untuk akses AI Generatif Teks ke Gambar tanpa batas",
     "plans": [
-      { "duration": "1 Bulan", "price": "Rp 55.000" }
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 55.000"
+      }
     ],
     "notes": [
       "Akun dari seller",
@@ -189,8 +339,14 @@
     "title": "🖋️ CorelDRAW V.25.1 - Cracked",
     "description": "(Windows Only)",
     "plans": [
-      { "type": "Soft File", "price": "Rp 75.000" },
-      { "type": "Soft File + Instalasi via Remote", "price": "Rp 100.000" }
+      {
+        "type": "Soft File",
+        "price": "Rp 75.000"
+      },
+      {
+        "type": "Soft File + Instalasi via Remote",
+        "price": "Rp 100.000"
+      }
     ],
     "notes": [
       "Tutorial instalasi sudah ada di soft file",
@@ -202,7 +358,10 @@
     "title": "🐭 Disney Plus",
     "description": "Akun Sharing resmi dari Disney+",
     "plans": [
-      { "duration": "1 Bulan", "price": "Rp 37.000" }
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 37.000"
+      }
     ],
     "notes": [
       "Tanpa Iklan - Kualitas 4K UHD",
@@ -214,8 +373,14 @@
     "title": "🦉 DuoLingo",
     "description": "Akun Private untuk belajar bahasa dengan mudah dan menyenangkan",
     "plans": [
-      { "duration": "1 Bulan", "price": "Rp 20.000" },
-      { "duration": "2–3 Bulan", "price": "Rp 35.000" }
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 20.000"
+      },
+      {
+        "duration": "2–3 Bulan",
+        "price": "Rp 35.000"
+      }
     ],
     "notes": [
       "Bisa akun pribadi"
@@ -225,7 +390,10 @@
     "title": "📸 Remini Premium",
     "description": "Akun Sharing resmi dari Remini (bukan mod)",
     "plans": [
-      { "duration": "1 Bulan", "price": "Rp 35.000" }
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 35.000"
+      }
     ],
     "notes": [
       "Legal & Asli dari Remini",
@@ -236,12 +404,30 @@
     "title": "📺 VIDIO Premium",
     "description": "Streaming tanpa iklan dan kualitas HD resmi dari Vidio",
     "plans": [
-      { "type": "Sharing - Mobile / TV", "price": "Rp 35.000" },
-      { "type": "Sharing - TV Only", "price": "Rp 17.000" },
-      { "type": "Sharing - Mobile Only", "price": "Rp 26.000" },
-      { "type": "Private - Mobile / TV", "price": "Rp 50.000" },
-      { "type": "Private - TV Only", "price": "Rp 26.000" },
-      { "type": "Private - Mobile Only", "price": "Rp 36.000" }
+      {
+        "type": "Sharing - Mobile / TV",
+        "price": "Rp 35.000"
+      },
+      {
+        "type": "Sharing - TV Only",
+        "price": "Rp 17.000"
+      },
+      {
+        "type": "Sharing - Mobile Only",
+        "price": "Rp 26.000"
+      },
+      {
+        "type": "Private - Mobile / TV",
+        "price": "Rp 50.000"
+      },
+      {
+        "type": "Private - TV Only",
+        "price": "Rp 26.000"
+      },
+      {
+        "type": "Private - Mobile Only",
+        "price": "Rp 36.000"
+      }
     ],
     "notes": [
       "Tonton tanpa iklan",
@@ -253,31 +439,43 @@
     "title": "🎵 TikTok Services",
     "description": "Layanan followers, likes, views, dan share TikTok cepat & aman",
     "plans": [
-      { "type": "Followers", "details": [
-        "100 Followers = Rp 25.000",
-        "500 Followers = Rp 37.000",
-        "1000 Followers = Rp 65.000"
-      ]},
-      { "type": "Likes", "details": [
-        "1000 Like = Rp 15.000",
-        "2000 Like = Rp 25.000",
-        "3000 Like = Rp 35.000",
-        "5000 Like = Rp 45.000"
-      ]},
-      { "type": "Views", "details": [
-        "10.000 View = Rp 15.000",
-        "30.000 View = Rp 25.000",
-        "50.000 View = Rp 35.000",
-        "100.000 View = Rp 70.000",
-        "500.000 View = Rp 150.000",
-        "1.000.000 View = Rp 250.000"
-      ]},
-      { "type": "Shares", "details": [
-        "1000 Share = Rp 15.000",
-        "2000 Share = Rp 25.000",
-        "3000 Share = Rp 35.000",
-        "5000 Share = Rp 45.000"
-      ]}
+      {
+        "type": "Followers",
+        "details": [
+          "100 Followers = Rp 25.000",
+          "500 Followers = Rp 37.000",
+          "1000 Followers = Rp 65.000"
+        ]
+      },
+      {
+        "type": "Likes",
+        "details": [
+          "1000 Like = Rp 15.000",
+          "2000 Like = Rp 25.000",
+          "3000 Like = Rp 35.000",
+          "5000 Like = Rp 45.000"
+        ]
+      },
+      {
+        "type": "Views",
+        "details": [
+          "10.000 View = Rp 15.000",
+          "30.000 View = Rp 25.000",
+          "50.000 View = Rp 35.000",
+          "100.000 View = Rp 70.000",
+          "500.000 View = Rp 150.000",
+          "1.000.000 View = Rp 250.000"
+        ]
+      },
+      {
+        "type": "Shares",
+        "details": [
+          "1000 Share = Rp 15.000",
+          "2000 Share = Rp 25.000",
+          "3000 Share = Rp 35.000",
+          "5000 Share = Rp 45.000"
+        ]
+      }
     ],
     "notes": [
       "Selama proses harap tidak di Private",
@@ -290,9 +488,18 @@
     "title": "📸 Instagram Followers",
     "description": "Layanan penambah followers cepat dan aman",
     "plans": [
-      { "duration": "100 Followers", "price": "Rp 12.000" },
-      { "duration": "500 Followers", "price": "Rp 37.000" },
-      { "duration": "1000 Followers", "price": "Rp 67.000" }
+      {
+        "duration": "100 Followers",
+        "price": "Rp 12.000"
+      },
+      {
+        "duration": "500 Followers",
+        "price": "Rp 37.000"
+      },
+      {
+        "duration": "1000 Followers",
+        "price": "Rp 67.000"
+      }
     ],
     "notes": [
       "Selama proses harap tidak di Private",

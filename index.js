@@ -10,6 +10,10 @@ const delay = (ms = 3000) => new Promise((res) => setTimeout(res, ms));
 
 // Load data produk dari file JSON
 const products = JSON.parse(fs.readFileSync("./products.json", "utf-8"));
+const aliases = {
+  gdrive: "drive",
+  veo3: "veo",
+};
 
 async function startBot() {
   const { state, saveCreds } = await useMultiFileAuthState("session");
@@ -115,9 +119,36 @@ async function handleGroupMessage(sock, from, sender, text) {
     await sock.sendMessage(from, {
       text: `${p.title}\n\n${p.description}\n\n${plans}\n\n${notes}`,
     });
-  } else if (lower === "!ping") {
-    await delay();
-    await sock.sendMessage(from, { text: "🏓 Pong dari grup!" });
+  } else {
+    const key = aliases[lower] || lower;
+    const p = products[key];
+    if (p) {
+      let plans = "";
+      if (p.plans && Array.isArray(p.plans)) {
+        plans = p.plans
+          .map((plan) => {
+            if (plan.details && Array.isArray(plan.details)) {
+              // format untuk TikTok
+              return `*${plan.type}*\n${plan.details.map((d) => `- ${d}`).join("\n")}`;
+            } else if (plan.duration && plan.price) {
+              // format umum
+              return `- ${plan.duration} : *${plan.price}*`;
+            } else if (plan.type && plan.price) {
+              // format seperti CorelDraw / Vidio
+              return `- ${plan.type} : *${plan.price}*`;
+            } else {
+              return ""; // fallback
+            }
+          })
+          .join("\n");
+      }
+      const notes = p.notes.map((n) => `• ${n}`).join("\n");
+
+      await delay();
+      await sock.sendMessage(from, {
+        text: `${p.title}\n\n${p.description}\n\n${plans}\n\n${notes}`,
+      });
+    }
   }
 }
 
