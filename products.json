@@ -42,20 +42,20 @@
     ]
   },
   "capcut": {
-    "title": "🎬 CapCut Pro",
-    "description": "Untuk iOS, Android, dan PC (Mac & Windows). Versi berkualitas, 100% siap pakai!",
+    "title": "🎬 CapCut Pro Promo Spesial 11.11 🎉",
+    "description": "Untuk iOS, Android, dan PC (Mac & Windows). Versi berkualitas, 100% siap pakai!\n\nDapatkan akun premium dengan harga super hemat:",
     "plans": [
       {
         "duration": "1 Bulan",
-        "price": "Rp 30.000"
+        "price": "Rp 20.000"
       },
       {
         "duration": "3 Bulan",
-        "price": "Rp 70.000"
+        "price": "Rp 50.000"
       },
       {
         "duration": "1 Tahun",
-        "price": "Rp 240.000"
+        "price": "Rp 220.000"
       }
     ],
     "notes": [
@@ -301,7 +301,7 @@
       "Akun pribadi",
       "Via invite family email"
     ]
-  }, 
+  },
   "veo": {
     "title": "🎬 VEO 3\n(BONUS GDrive 2TB + Gemini Ai Pro)",
     "description": "Semi Private • Akses paket Veo 3 dengan Bonus Paket - Google Drive 2TB dan Gemini Ai Pro",
@@ -505,6 +505,28 @@
       "Selama proses harap tidak di Private",
       "Jangan ubah username saat pesanan diproses",
       "Country mix world | Asia | Eropa"
+    ]
+  },
+  "vn": {
+    "title": "🎬 VN PRO",
+    "description": "Untuk iOS\nVersi berkualitas, 100% siap pakai!\nLangsung aktif setelah pembayaran, tanpa ribet dan tanpa watermark!",
+    "plans": [
+      {
+        "duration": "7 Hari",
+        "price": "Rp 10.000"
+      },
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 20.000"
+      },
+      {
+        "duration": "3 Bulan",
+        "price": "Rp 40.000"
+      }
+    ],
+    "notes": [
+      "Garansi ON",
+      "Akun Resmi dari VN bukan MOD"
     ]
   }
 }

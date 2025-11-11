@@ -13,6 +13,8 @@ const products = JSON.parse(fs.readFileSync("./products.json", "utf-8"));
 const aliases = {
   gdrive: "drive",
   veo3: "veo",
+  vnpro: "vn",
+  "vn pro": "vn",
 };
 
 async function startBot() {
