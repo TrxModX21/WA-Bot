@@ -113,13 +113,13 @@ async function handleGroupMessage(sock, from, sender, text) {
             return ""; // fallback
           }
         })
-        .join("\nSyarat & Ketentuan:\n");
+        .join("\n");
     }
     const notes = p.notes.map((n) => `• ${n}`).join("\n");
 
     await delay();
     await sock.sendMessage(from, {
-      text: `${p.title}\n\n${p.description}\n\n${plans}\n\n${notes}`,
+      text: `${p.title}\n\n${p.description}\n\n${plans}\n\nSyarat & Ketentuan:\n${notes}`,
     });
   } else {
     const key = aliases[lower] || lower;
@@ -142,13 +142,13 @@ async function handleGroupMessage(sock, from, sender, text) {
               return ""; // fallback
             }
           })
-          .join("\nSyarat & Ketentuan:\n");
+          .join("\n");
       }
       const notes = p.notes.map((n) => `• ${n}`).join("\n");
 
       await delay();
       await sock.sendMessage(from, {
-        text: `${p.title}\n\n${p.description}\n\n${plans}\n\n${notes}`,
+        text: `${p.title}\n\n${p.description}\n\n${plans}\n\nSyarat & Ketentuan:\n${notes}`,
       });
     }
   }
