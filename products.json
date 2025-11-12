@@ -528,5 +528,27 @@
       "Garansi ON",
       "Akun Resmi dari VN bukan MOD"
     ]
+  },
+  "iflix": {
+    "title": "📺 iFlix",
+    "description": "(Akun Sharing) 1 Profil = 1 Pengguna (tanpa VPN)",
+    "plans": [
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 30.000"
+      },
+      {
+        "duration": "2 Bulan",
+        "price": "Rp 55.000"
+      },
+      {
+        "duration": "3 Bulan",
+        "price": "Rp 80.000"
+      }
+    ],
+    "notes": [
+      "jangan ubah data apapun pada akun",
+      "jangan menggunakan lebih perangkat atau akun akan mati"
+    ]
   }
 }
