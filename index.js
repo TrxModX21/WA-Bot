@@ -113,7 +113,7 @@ async function handleGroupMessage(sock, from, sender, text) {
             return ""; // fallback
           }
         })
-        .join("\n");
+        .join("\nSyarat & Ketentuan:\n");
     }
     const notes = p.notes.map((n) => `• ${n}`).join("\n");
 
@@ -142,7 +142,7 @@ async function handleGroupMessage(sock, from, sender, text) {
               return ""; // fallback
             }
           })
-          .join("\n");
+          .join("\nSyarat & Ketentuan:\n");
       }
       const notes = p.notes.map((n) => `• ${n}`).join("\n");
 
