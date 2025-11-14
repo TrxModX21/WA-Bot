@@ -582,9 +582,9 @@
     ]
   },
   "gamma": {
-    "title": "🧠 Gamma Ai\n(Akun Sharing)",
+    "title": "🧠 Gamma Ai",
     "is_ready": true,
-    "description": "",
+    "description": "(Akun Sharing)",
     "plans": [
       {
         "duration": "1 Bulan",
@@ -601,9 +601,9 @@
     ]
   },
   "viu": {
-    "title": "🧠 Viu Premium\n(Akun Private)",
+    "title": "🧠 Viu Premium",
     "is_ready": true,
-    "description": "&nbsp;",
+    "description": "(Akun Private)",
     "plans": [
       {
         "duration": "1 Bulan",
