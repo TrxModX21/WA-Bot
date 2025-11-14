@@ -15,6 +15,7 @@ const aliases = {
   veo3: "veo",
   vnpro: "vn",
   "vn pro": "vn",
+  "gamma ai": "gamma"
 };
 
 async function startBot() {

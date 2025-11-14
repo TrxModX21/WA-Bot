@@ -270,12 +270,17 @@
         "type": "Akun Private",
         "duration": "1 Bulan (Private)",
         "price": "Rp 55.000"
+      },
+      {
+        "type": "Akun Private",
+        "duration": "1 Tahun (Private)",
+        "price": "Rp 170.000"
       }
     ],
     "notes": [
       "Akun dari seller untuk versi Sharing",
-      "Akun pribadi untuk versi Private",
-      "Dilarang mengganti password"
+      "Akun Sharing Dilarang Ganti Password",
+      "Akun pribadi untuk versi Private"
     ]
   },
   "gemini": {
@@ -574,6 +579,45 @@
     "notes": [
       "jangan ubah data apapun pada akun",
       "jangan menggunakan lebih perangkat atau akun akan mati"
+    ]
+  },
+  "gamma": {
+    "title": "🧠 Gamma Ai\n(Akun Sharing)",
+    "is_ready": true,
+    "description": "",
+    "plans": [
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 15.000"
+      },
+      {
+        "duration": "3 Bulan",
+        "price": "Rp 35.000"
+      }      
+    ],
+    "notes": [
+      "Dilarang Mengganti Password",
+      "Dilarang mengganti settingan apapun"
+    ]
+  },
+  "viu": {
+    "title": "🧠 Viu Premium\n(Akun Private)",
+    "is_ready": true,
+    "description": "",
+    "plans": [
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 13.000"
+      },
+      {
+        "duration": "3 Bulan",
+        "price": "Rp 23.000"
+      }      
+    ],
+    "notes": [
+      "Premium Biasa (Bukan Premium Plus+)",
+      "1 Akun 1 Orang (Akun Privat)",
+      "Bukan Akun MOD/Ilegal (bukan curian)"
     ]
   }
 }
