@@ -87,7 +87,7 @@ async function handleGroupMessage(sock, from, sender, text) {
 
   if (lower === "!menu") {
     const list = Object.keys(products)
-      .map((key) => `• *${products[key].title}* — ketik *${key}*`)
+      .map((key) => `• *${products[key].title}*${products[key].subtitle ? "\n" + products[key].subtitle : ''} — ketik *${key}*`)
       .join("\n");
 
     await delay();
