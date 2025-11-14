@@ -90,12 +90,12 @@ async function handleGroupMessage(sock, from, sender, text) {
     //   .map((key) => `• *${products[key].title}* — ketik *${key}*`)
     //   .join("\n");
     const list = Object.keys(products)
-      .map((key) => `• ${products[key].title}`)
+      .map((key) => `- ${products[key].title}`)
       .join("\n");
 
     await delay();
     await sock.sendMessage(from, {
-      text: `📋 *Menu Produk Tersedia:*\n\n${list}\n\nKetik nama produk (contoh: *youtube*) untuk lihat detailnya.\nUntuk pemesanan bisa langsung hubungi admin\n082312300176 (Admin Software Murah)`,
+      text: `📋 *Menu Produk Tersedia:*\n\n${list}\n\n*Ketik nama produk (contoh: *youtube*) untuk lihat detailnya.\n\n*Untuk pemesanan bisa langsung hubungi admin\n082312300176 (Admin Software Murah)`,
     });
   } else if (products[lower]) {
     const p = products[lower];
