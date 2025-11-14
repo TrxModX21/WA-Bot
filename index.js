@@ -96,15 +96,18 @@ async function handleGroupMessage(sock, from, sender, text) {
   } else if (products[lower]) {
     const p = products[lower];
     let plans = "";
-    let isReady = true;
+
+    if (p.is_ready === false) {
+      await delay();
+      return sock.sendMessage(from, {
+        text: `${p.title}\nKosong ❌`
+      });
+    }
 
     if (p.plans && Array.isArray(p.plans)) {
       plans = p.plans
         .map((plan) => {
-          if (plan.is_ready === false) {
-            isReady = false;
-          }
-          else if (plan.details && Array.isArray(plan.details)) {
+          if (plan.details && Array.isArray(plan.details)) {
             // format untuk TikTok
             return `*${plan.type}*\n${plan.details.map((d) => `- ${d}`).join("\n")}`;
           } else if (plan.duration && plan.price) {
@@ -120,21 +123,23 @@ async function handleGroupMessage(sock, from, sender, text) {
         .join("\n");
     }
     const notes = p.notes.map((n) => `• ${n}`).join("\n");
-    let finalText = '';
-    if (isReady) {
-      finalText = `${p.title}\n\n${p.description}\n\n${plans}\n\nSyarat & Ketentuan:\n${notes}`;
-    } else {
-      finalText = `${p.title}\nKosong ❌`
-    }
 
     await delay();
     await sock.sendMessage(from, {
-      text: finalText,
+      text: `${p.title}\n\n${p.description}\n\n${plans}\n\nSyarat & Ketentuan:\n${notes}`,
     });
   } else {
     const key = aliases[lower] || lower;
     const p = products[key];
     if (p) {
+
+      if (p.is_ready === false) {
+        await delay();
+        return sock.sendMessage(from, {
+          text: `${p.title}\nKosong ❌`
+        });
+      }
+
       let plans = "";
       if (p.plans && Array.isArray(p.plans)) {
         plans = p.plans
