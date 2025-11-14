@@ -1,6 +1,6 @@
 {
   "youtube": {
-    "title": "🎵 YouTube Premium",
+    "title": "YouTube Premium",
     "is_ready": true,
     "description": "Langganan hemat untuk YouTube Premium dan YouTube Music tanpa iklan 🎧",
     "plans": [
@@ -20,7 +20,7 @@
     ]
   },
   "spotify": {
-    "title": "🎶 Spotify Premium Private",
+    "title": "Spotify Premium Private",
     "is_ready": true,
     "description": "Akses musik tanpa batas dan tanpa iklan",
     "plans": [
@@ -44,7 +44,7 @@
     ]
   },
   "capcut": {
-    "title": "🎬 CapCut Pro Promo Spesial 11.11 🎉",
+    "title": "CapCut Pro Promo Spesial 11.11 🎉",
     "is_ready": true,
     "description": "Untuk iOS, Android, dan PC (Mac & Windows). Versi berkualitas, 100% siap pakai!\n\nDapatkan akun premium dengan harga super hemat:",
     "plans": [
@@ -67,7 +67,7 @@
     ]
   },
   "canva": {
-    "title": "🎨 Canva Pro Premium",
+    "title": "Canva Pro Premium",
     "is_ready": true,
     "description": "Full fitur • Tanpa batas • Legal & bergaransi",
     "plans": [
@@ -94,7 +94,7 @@
     ]
   },
   "loklok": {
-    "title": "📱 LOKLOK Sharing",
+    "title": "LOKLOK Sharing",
     "is_ready": true,
     "description": "Untuk iOS dan Android",
     "plans": [
@@ -114,7 +114,7 @@
     ]
   },
   "netflix": {
-    "title": "📺 Netflix Sharing",
+    "title": "Netflix Sharing",
     "is_ready": true,
     "description": "Region ID • 1 Profil = 1 Pengguna (tanpa VPN) • Anti Hold | Garansi Aktif | Support HD – 4K",
     "plans": [
@@ -138,7 +138,7 @@
     ]
   },
   "alightmotion": {
-    "title": "📸 AlightMotion Private",
+    "title": "AlightMotion Private",
     "is_ready": true,
     "description": "Share (Private Project)",
     "plans": [
@@ -166,7 +166,7 @@
     ]
   },
   "amazonprime": {
-    "title": "🎥 Amazon Prime Video",
+    "title": "Amazon Prime Video",
     "is_ready": true,
     "description": "Private Akun untuk streaming film dan series eksklusif Prime Video",
     "plans": [
@@ -190,7 +190,7 @@
     ]
   },
   "icloud": {
-    "title": "☁️ iCloud 2TB (2–3 Bulan)",
+    "title": "iCloud 2TB (2–3 Bulan)",
     "is_ready": true,
     "description": "Penyimpanan cloud premium Apple dengan kapasitas besar dan fitur tambahan eksklusif.",
     "plans": [
@@ -206,7 +206,7 @@
     ]
   },
   "blackbox": {
-    "title": "🤖 Blackbox Ai Premium",
+    "title": "Blackbox Ai Premium",
     "is_ready": true,
     "description": "Akun Sharing",
     "plans": [
@@ -234,7 +234,7 @@
     ]
   },
   "bstation": {
-    "title": "🎞️ Bstation Premium",
+    "title": "Bstation Premium",
     "is_ready": true,
     "description": "Akun Sharing",
     "plans": [
@@ -257,7 +257,7 @@
     ]
   },
   "chatgpt": {
-    "title": "🧠 ChatGPT Premium",
+    "title": "ChatGPT Premium",
     "is_ready": true,
     "description": "Tersedia dua jenis akun: Sharing & Private dengan akses GPT Premium cepat dan stabil.",
     "plans": [
@@ -284,8 +284,7 @@
     ]
   },
   "gemini": {
-    "title": "🌌 Gemini Ai Pro",
-    "subtitle": "(BONUS VEO 3 + GDrive 2TB)",
+    "title": "Gemini Ai Pro (BONUS VEO 3 + GDrive 2TB)",
     "is_ready": true,
     "description": "Semi Private • Akses paket Gemini AI Pro dengan Bonus Paket - Veo 3 dan Google Drive 2TB",
     "plans": [
@@ -304,8 +303,7 @@
     ]
   },
   "drive": {
-    "title": "📁 GDrive 2TB",
-    "subtitle": "(BONUS VEO 3 + Gemini Ai Pro)",
+    "title": "GDrive 2TB (BONUS VEO 3 + Gemini AI Pro)",
     "is_ready": true,
     "description": "Semi Private • Akses paket Google Drive 2TB dengan Bonus Paket - Veo 3 dan Gemini Ai Pro",
     "plans": [
@@ -324,8 +322,7 @@
     ]
   },
   "veo": {
-    "title": "🎬 VEO 3",
-    "subtitle": "(BONUS GDrive 2TB + Gemini Ai Pro)",
+    "title": "VEO 3",
     "is_ready": true,
     "description": "Semi Private • Akses paket Veo 3 dengan Bonus Paket - Google Drive 2TB dan Gemini Ai Pro",
     "plans": [
@@ -344,7 +341,7 @@
     ]
   },
   "leonardo": {
-    "title": "🎨 Leonardo Ai Premium",
+    "title": "Leonardo Ai Premium",
     "is_ready": true,
     "description": "Akun Sharing untuk akses AI Generatif Teks ke Gambar tanpa batas",
     "plans": [
@@ -360,7 +357,7 @@
     ]
   },
   "coreldraw": {
-    "title": "🖋️ CorelDRAW V.25.1 - Cracked",
+    "title": "CorelDRAW V.25.1 - Cracked",
     "is_ready": true,
     "description": "(Windows Only)",
     "plans": [
@@ -380,7 +377,7 @@
     ]
   },
   "disney": {
-    "title": "🐭 Disney Plus",
+    "title": "Disney Plus",
     "is_ready": true,
     "description": "Akun Sharing resmi dari Disney+",
     "plans": [
@@ -396,7 +393,7 @@
     ]
   },
   "duolingo": {
-    "title": "🦉 DuoLingo",
+    "title": "DuoLingo",
     "is_ready": false,
     "description": "Akun Private untuk belajar bahasa dengan mudah dan menyenangkan",
     "plans": [
@@ -414,7 +411,7 @@
     ]
   },
   "remini": {
-    "title": "📸 Remini Premium",
+    "title": "Remini Premium",
     "is_ready": true,
     "description": "Akun Sharing resmi dari Remini (bukan mod)",
     "plans": [
@@ -429,7 +426,7 @@
     ]
   },
   "vidio": {
-    "title": "📺 VIDIO Premium",
+    "title": "VIDIO Premium",
     "is_ready": true,
     "description": "Streaming tanpa iklan dan kualitas HD resmi dari Vidio",
     "plans": [
@@ -465,7 +462,7 @@
     ]
   },
   "tiktok": {
-    "title": "🎵 TikTok Services",
+    "title": "TikTok Services",
     "is_ready": true,
     "description": "Layanan followers, likes, views, dan share TikTok cepat & aman",
     "plans": [
@@ -515,7 +512,7 @@
     ]
   },
   "instagram": {
-    "title": "📸 Instagram Followers",
+    "title": "Instagram Followers",
     "is_ready": true,
     "description": "Layanan penambah followers cepat dan aman",
     "plans": [
@@ -539,7 +536,7 @@
     ]
   },
   "vn": {
-    "title": "🎬 VN PRO",
+    "title": "VN PRO",
     "is_ready": true,
     "description": "Untuk iOS\nVersi berkualitas, 100% siap pakai!\nLangsung aktif setelah pembayaran, tanpa ribet dan tanpa watermark!",
     "plans": [
@@ -562,7 +559,7 @@
     ]
   },
   "iflix": {
-    "title": "📺 iFlix",
+    "title": "iFlix",
     "is_ready": true,
     "description": "(Akun Sharing) 1 Profil = 1 Pengguna (tanpa VPN)",
     "plans": [
@@ -585,7 +582,7 @@
     ]
   },
   "gamma": {
-    "title": "🧠 Gamma Ai",
+    "title": "Gamma Ai",
     "is_ready": true,
     "description": "(Akun Sharing)",
     "plans": [
@@ -604,7 +601,7 @@
     ]
   },
   "viu": {
-    "title": "🧠 Viu Premium",
+    "title": "Viu Premium",
     "is_ready": true,
     "description": "(Akun Private)",
     "plans": [

@@ -86,8 +86,11 @@ async function handleGroupMessage(sock, from, sender, text) {
   const lower = text.toLowerCase();
 
   if (lower === "!menu") {
+    // const list = Object.keys(products)
+    //   .map((key) => `• *${products[key].title}* — ketik *${key}*`)
+    //   .join("\n");
     const list = Object.keys(products)
-      .map((key) => `• *${products[key].title}*${products[key].subtitle ? "\n" + products[key].subtitle : ''} — ketik *${key}*`)
+      .map((key) => `• ${products[key].title}`)
       .join("\n");
 
     await delay();
