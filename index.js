@@ -101,7 +101,7 @@ async function handleGroupMessage(sock, from, sender, text) {
     if (p.plans && Array.isArray(p.plans)) {
       plans = p.plans
         .map((plan) => {
-          if (!plan.is_ready) {
+          if (plan.is_ready === false) {
             isReady = false;
           }
           else if (plan.details && Array.isArray(plan.details)) {
