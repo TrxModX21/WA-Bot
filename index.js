@@ -95,7 +95,7 @@ async function handleGroupMessage(sock, from, sender, text) {
 
     await delay();
     await sock.sendMessage(from, {
-      text: `📋 *Menu Produk Tersedia:*\n\n${list}\n\nketik nama produk (contoh: *youtube*) untuk lihat detailnya.\n\n*Untuk pemesanan bisa langsung hubungi admin 082312300176\n(Admin Software Murah)`,
+      text: `📋 *Menu Produk Tersedia:*\n\n${list}\n\n*ketik nama produk\n(contoh: *youtube*) untuk lihat detailnya.\n\n*Untuk pemesanan bisa langsung hubungi admin 082312300176\n(Admin Software Murah)`,
     });
   } else if (products[lower]) {
     const p = products[lower];
