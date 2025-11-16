@@ -248,7 +248,7 @@
       },
       {
         "duration": "12 Bulan",
-        "price": "Rp 45.000"
+        "price": "kosong ❌"
       }
     ],
     "notes": [
@@ -618,6 +618,26 @@
       "Premium Biasa (Bukan Premium Plus+)",
       "1 Akun 1 Orang (Akun Privat)",
       "Bukan Akun MOD/Ilegal (bukan curian)"
+    ]
+  },
+  "iqiyi": {
+    "title": "IQIYI Premium",
+    "is_ready": true,
+    "description": "Akun Sharing",
+    "plans": [
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 19.000"
+      },
+      {
+        "duration": "3 Bulan",
+        "price": "Rp 37.000"
+      }
+    ],
+    "notes": [
+      "Tanpa Iklan",
+      "Legal & Asli dari IQIYI (bukan mod)",
+      "Hanya boleh login 1 Device"
     ]
   }
 }
