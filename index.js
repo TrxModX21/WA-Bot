@@ -172,9 +172,15 @@ async function handleGroupMessage(sock, from, sender, text) {
       }
       const notes = p.notes.map((n) => `• ${n}`).join("\n");
 
+      const featuresTitle = p.features_title ? `\n\n${p.features_title}` : '';
+      let features = '';
+      if (p.features) {
+        features = p.features.map((f) => `+ ${f}`).join('\n');
+      }
+
       await delay();
       await sock.sendMessage(from, {
-        text: `${p.title}\n\n${p.description}\n\n${plans}\n\nSyarat & Ketentuan:\n${notes}`,
+        text: `${p.title}\n\n${p.description}\n\n${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`,
       });
     }
   }
