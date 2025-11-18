@@ -639,5 +639,24 @@
       "Legal & Asli dari IQIYI (bukan mod)",
       "Hanya boleh login 1 Device"
     ]
+  },
+  "zoom": {
+    "title": "Zoom Meetings Pro",
+    "is_ready": true,
+    "description": "(Semi Private)\nFITUR zoom\n+ 100 participant\n+ Unlimited Time\n+ Breakout room\n+ Host & Co-Host\n+ Live streaming\n+ Custom topic meeting\n+ Recording langsung ke laptop",
+    "plans": [
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 20.000"
+      },
+      {
+        "duration": "3 Bulan",
+        "price": "Rp 50.000"
+      }
+    ],
+    "notes": [
+      "akun dari seller",
+      "dilarang mengganti pw"
+    ]
   }
 }
