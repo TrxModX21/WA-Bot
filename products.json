@@ -643,7 +643,7 @@
   "zoom": {
     "title": "Zoom Meetings Pro",
     "is_ready": true,
-    "description": "(Semi Private)\nFITUR zoom\n+ 100 participant\n+ Unlimited Time\n+ Breakout room\n+ Host & Co-Host\n+ Live streaming\n+ Custom topic meeting\n+ Recording langsung ke laptop",
+    "description": "(Semi Private)",
     "plans": [
       {
         "duration": "1 Bulan",
@@ -657,6 +657,16 @@
     "notes": [
       "akun dari seller",
       "dilarang mengganti pw"
+    ],
+    "features_title": "FITUR zoom",
+    "features": [
+      "100 participant",
+      "Unlimited Time",
+      "Breakout room",
+      "Host & Co-Host",
+      "Live streaming",
+      "Custom topic meeting",
+      "Recording langsung ke laptop"
     ]
   }
 }
