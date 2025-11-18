@@ -129,7 +129,7 @@ async function handleGroupMessage(sock, from, sender, text) {
     }
     const notes = p.notes.map((n) => `• ${n}`).join("\n");
 
-    const featuresTitle = p.features_title ?? '';
+    const featuresTitle = `\n\n${p.features_title}` ?? '';
     let features = '';
     if (p.features) {
       features = p.features.map((f) => `+ ${f}`).join('\n');
@@ -137,7 +137,7 @@ async function handleGroupMessage(sock, from, sender, text) {
 
     await delay();
     await sock.sendMessage(from, {
-      text: `${p.title}\n\n${p.description}\n\n${plans}\n\nSyarat & Ketentuan:\n${notes}\n${featuresTitle}\n${features}`,
+      text: `${p.title}\n\n${p.description}\n\n${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`,
     });
   } else {
     const key = aliases[lower] || lower;
