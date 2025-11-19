@@ -121,11 +121,7 @@
       {
         "duration": "1 Bulan",
         "price": "Rp 30.000"
-      },
-      {
-        "duration": "2 Bulan",
-        "price": "Rp 50.000"
-      },
+      },      
       {
         "duration": "3 Bulan",
         "price": "Rp 70.000"
@@ -165,7 +161,7 @@
       "Akun private"
     ]
   },
-  "amazonprime": {
+  "amazon": {
     "title": "Amazon Prime Video",
     "is_ready": true,
     "description": "Private Akun untuk streaming film dan series eksklusif Prime Video",
