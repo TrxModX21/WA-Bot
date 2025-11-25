@@ -44,21 +44,25 @@
     ]
   },
   "capcut": {
-    "title": "CapCut Pro Promo Spesial 11.11",
+    "title": "CapCut Pro",
     "is_ready": true,
-    "description": "Untuk iOS, Android, dan PC (Mac & Windows). Versi berkualitas, 100% siap pakai!\n\nDapatkan akun premium dengan harga super hemat:",
+    "description": "Untuk iOS, Android, dan PC (Mac & Windows). Versi berkualitas, 100% siap pakai!",
     "plans": [
       {
+        "duration": "1 Minggu",
+        "price": "Rp 10.000"
+      },
+      {
         "duration": "1 Bulan",
-        "price": "Rp 20.000"
+        "price": "Rp 30.000"
       },
       {
         "duration": "3 Bulan",
-        "price": "Rp 50.000"
+        "price": "Rp 70.000"
       },
       {
         "duration": "1 Tahun",
-        "price": "Rp 185.000"
+        "price": "Rp 240.000"
       }
     ],
     "notes": [
@@ -121,7 +125,7 @@
       {
         "duration": "1 Bulan",
         "price": "Rp 30.000"
-      },      
+      },
       {
         "duration": "3 Bulan",
         "price": "Rp 70.000"
