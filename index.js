@@ -114,13 +114,15 @@ async function handleGroupMessage(sock, from, sender, text) {
         .map((plan) => {
           if (plan.details && Array.isArray(plan.details)) {
             // format untuk TikTok
-            return `*${plan.type}*\n${plan.details.map((d) => `- ${d}`).join("\n")}`;
-          } else if (plan.duration && plan.price) {
+            return `*${plan.type}*\n${plan.details.map((d) => `- ${d}`).join("\n\n")}`;
+          } else if (plan.duration && plan.price && !plan.isPromo) {
             // format umum
             return `- ${plan.duration} : *${plan.price}*`;
           } else if (plan.type && plan.price) {
             // format seperti CorelDraw / Vidio
             return `- ${plan.type} : *${plan.price}*`;
+          } else if (plan.isPromo && plan.isPromo === true) {
+            return `\n\nPROMO\n- ${plan.duration} : *${plan.price}*`
           }
           else {
             return ""; // fallback
@@ -159,12 +161,14 @@ async function handleGroupMessage(sock, from, sender, text) {
             if (plan.details && Array.isArray(plan.details)) {
               // format untuk TikTok
               return `*${plan.type}*\n${plan.details.map((d) => `- ${d}`).join("\n")}`;
-            } else if (plan.duration && plan.price) {
+            } else if (plan.duration && plan.price && !plan.isPromo) {
               // format umum
               return `- ${plan.duration} : *${plan.price}*`;
             } else if (plan.type && plan.price) {
               // format seperti CorelDraw / Vidio
               return `- ${plan.type} : *${plan.price}*`;
+            } else if (plan.isPromo && plan.isPromo === true) {
+              return `\n\nPROMO\n- ${plan.duration} : *${plan.price}*`
             } else {
               return ""; // fallback
             }

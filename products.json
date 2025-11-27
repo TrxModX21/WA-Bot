@@ -54,11 +54,11 @@
       },
       {
         "duration": "1 Bulan",
-        "price": "Rp 30.000"
+        "price": "Rp 25.000"
       },
       {
         "duration": "3 Bulan",
-        "price": "Rp 70.000"
+        "price": "Rp 65.000"
       },
       {
         "duration": "1 Tahun",
@@ -118,9 +118,9 @@
     ]
   },
   "netflix": {
-    "title": "Netflix Sharing",
+    "title": "Netflix\nSemi Private",
     "is_ready": true,
-    "description": "Region ID • 1 Profil = 1 Pengguna (tanpa VPN) • Anti Hold | Garansi Aktif | Support HD – 4K",
+    "description": "Region ID • 1 Profil = 1 Pengguna (tanpa VPN) • Anti Hold | Garansi Aktif | Support HD - 4K",
     "plans": [
       {
         "duration": "1 Bulan",
@@ -295,6 +295,11 @@
       {
         "duration": "2 Bulan",
         "price": "Rp 35.000"
+      },
+      {
+        "isPromo": true,
+        "duration": "1 Tahun",
+        "price": "Rp 80.000"
       }
     ],
     "notes": [
@@ -314,6 +319,11 @@
       {
         "duration": "2 Bulan",
         "price": "Rp 35.000"
+      },
+      {
+        "isPromo": true,
+        "duration": "1 Tahun",
+        "price": "Rp 80.000"
       }
     ],
     "notes": [
@@ -333,6 +343,11 @@
       {
         "duration": "2 Bulan",
         "price": "Rp 35.000"
+      },
+      {
+        "isPromo": true,
+        "duration": "1 Tahun",
+        "price": "Rp 80.000"
       }
     ],
     "notes": [
