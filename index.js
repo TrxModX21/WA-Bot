@@ -122,7 +122,7 @@ async function handleGroupMessage(sock, from, sender, text) {
             // format seperti CorelDraw / Vidio
             return `- ${plan.type} : *${plan.price}*`;
           } else if (plan.isPromo && plan.isPromo === true) {
-            return `\n\nPROMO\n- ${plan.duration} : *${plan.price}*`
+            return `\nPROMO\n- ${plan.duration} : *${plan.price}*`
           }
           else {
             return ""; // fallback
@@ -168,7 +168,7 @@ async function handleGroupMessage(sock, from, sender, text) {
               // format seperti CorelDraw / Vidio
               return `- ${plan.type} : *${plan.price}*`;
             } else if (plan.isPromo && plan.isPromo === true) {
-              return `\n\nPROMO\n- ${plan.duration} : *${plan.price}*`
+              return `\nPROMO\n- ${plan.duration} : *${plan.price}*`
             } else {
               return ""; // fallback
             }
