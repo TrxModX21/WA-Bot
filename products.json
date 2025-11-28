@@ -92,10 +92,7 @@
         "price": "Rp 35.000"
       }
     ],
-    "notes": [
-      "Langsung aktif setelah pembayaran",
-      "Bisa pakai akun sendiri"
-    ]
+    "notes": ["Langsung aktif setelah pembayaran", "Bisa pakai akun sendiri"]
   },
   "loklok": {
     "title": "LOKLOK Sharing",
@@ -159,11 +156,7 @@
         "price": "Rp 65.000"
       }
     ],
-    "notes": [
-      "Login dengan email",
-      "Support Android & iOS",
-      "Akun private"
-    ]
+    "notes": ["Login dengan email", "Support Android & iOS", "Akun private"]
   },
   "amazon": {
     "title": "Amazon Prime Video",
@@ -251,10 +244,7 @@
         "price": "kosong ❌"
       }
     ],
-    "notes": [
-      "Tanpa Iklan",
-      "Legal & Asli dari Bstation (bukan mod)"
-    ]
+    "notes": ["Tanpa Iklan", "Legal & Asli dari Bstation (bukan mod)"]
   },
   "chatgpt": {
     "title": "ChatGPT Premium",
@@ -302,10 +292,7 @@
         "price": "Rp 80.000"
       }
     ],
-    "notes": [
-      "Akun pribadi",
-      "Via invite family email"
-    ]
+    "notes": ["Akun pribadi", "Via invite family email"]
   },
   "drive": {
     "title": "GDrive 2TB (BONUS VEO 3 + Gemini AI Pro)",
@@ -326,10 +313,7 @@
         "price": "Rp 80.000"
       }
     ],
-    "notes": [
-      "Akun pribadi",
-      "Via invite family email"
-    ]
+    "notes": ["Akun pribadi", "Via invite family email"]
   },
   "veo": {
     "title": "VEO 3",
@@ -350,10 +334,7 @@
         "price": "Rp 80.000"
       }
     ],
-    "notes": [
-      "Akun pribadi",
-      "Via invite family email"
-    ]
+    "notes": ["Akun pribadi", "Via invite family email"]
   },
   "leonardo": {
     "title": "Leonardo Ai Premium",
@@ -421,9 +402,7 @@
         "price": "Rp 35.000"
       }
     ],
-    "notes": [
-      "Bisa akun pribadi"
-    ]
+    "notes": ["Bisa akun pribadi"]
   },
   "remini": {
     "title": "Remini Premium",
@@ -435,10 +414,7 @@
         "price": "Rp 35.000"
       }
     ],
-    "notes": [
-      "Legal & Asli dari Remini",
-      "Support Web/iOS/Android"
-    ]
+    "notes": ["Legal & Asli dari Remini", "Support Web/iOS/Android"]
   },
   "vidio": {
     "title": "VIDIO Premium",
@@ -470,11 +446,7 @@
         "price": "Rp 36.000"
       }
     ],
-    "notes": [
-      "Tonton tanpa iklan",
-      "Kualitas HD",
-      "Legal resmi dari Vidio"
-    ]
+    "notes": ["Tonton tanpa iklan", "Kualitas HD", "Legal resmi dari Vidio"]
   },
   "tiktok": {
     "title": "TikTok Services",
@@ -568,10 +540,7 @@
         "price": "Rp 40.000"
       }
     ],
-    "notes": [
-      "Garansi ON",
-      "Akun Resmi dari VN bukan MOD"
-    ]
+    "notes": ["Garansi ON", "Akun Resmi dari VN bukan MOD"]
   },
   "iflix": {
     "title": "iFlix",
@@ -669,10 +638,7 @@
         "price": "Rp 50.000"
       }
     ],
-    "notes": [
-      "akun dari seller",
-      "dilarang mengganti pw"
-    ],
+    "notes": ["akun dari seller", "dilarang mengganti pw"],
     "features_title": "FITUR zoom",
     "features": [
       "100 participant",
@@ -682,6 +648,169 @@
       "Live streaming",
       "Custom topic meeting",
       "Recording langsung ke laptop"
+    ]
+  },
+  "apple tv": {
+    "title": "Apple TV+ Premium",
+    "is_ready": true,
+    "description": "Menonton film & series eksklusif Apple TV+ dengan kualitas HD/4K, stabil, dan tanpa iklan.",
+    "plans": [
+      {
+        "duration": "1 Bulan (Sharing)",
+        "price": "Rp 35.000"
+      },
+      {
+        "duration": "3 Bulan (Private)",
+        "price": "Rp 54.000"
+      }
+    ],
+    "notes": [
+      "Akun Sharing disediakan oleh seller",
+      "Dilarang mengganti password/setting pada akun Sharing",
+      "Private berupa akun pribadi khusus untuk pembeli",
+      "Garansi akses full selama masa berlangganan"
+    ]
+  },
+  "youku": {
+    "title": "YouKu Premium",
+    "is_ready": true,
+    "description": "Akses ribuan drama Tiongkok, variety show, dan film eksklusif dengan kualitas HD yang stabil dan lancar.",
+    "plans": [
+      {
+        "duration": "1 Bulan (Sharing)",
+        "price": "Rp 24.000"
+      },
+      {
+        "duration": "3 Bulan (Sharing)",
+        "price": "Rp 62.000"
+      }
+    ],
+    "notes": [
+      "Akun Sharing dari seller",
+      "Dilarang mengganti password maupun pengaturan akun"
+    ]
+  },
+  "mango": {
+    "title": "Mango TV Premium",
+    "is_ready": true,
+    "description": "Nonton drama, variety show, dan konten eksklusif Mango TV dengan kualitas HD yang stabil dan lancar.",
+    "plans": [
+      {
+        "duration": "1 Bulan (Sharing)",
+        "price": "Rp 25.000"
+      },
+      {
+        "duration": "1 Bulan (Unlimited)",
+        "price": "Rp 35.000"
+      },
+      {
+        "duration": "1 Bulan (Private Akun)",
+        "price": "Rp 44.000"
+      }
+    ],
+    "notes": [
+      "Akun Sharing & Unlimited berasal dari seller",
+      "Dilarang mengganti password atau pengaturan akun Sharing/Unlimited",
+      "Private berupa akun pribadi khusus untuk pembeli"
+    ]
+  },
+  "catchplay": {
+    "title": "Catchplay + Premium",
+    "is_ready": true,
+    "description": "Akses film-film terbaru, blockbuster, dan konten eksklusif dengan kualitas HD yang stabil.",
+    "plans": [
+      {
+        "duration": "1 Bulan (Sharing)",
+        "price": "Rp 24.000"
+      }
+    ],
+    "notes": [
+      "Akun Sharing dari seller",
+      "Dilarang mengganti password atau pengaturan akun"
+    ]
+  },
+  "apple music": {
+    "title": "Apple Music Premium",
+    "is_ready": true,
+    "description": "Dengarkan jutaan lagu dengan kualitas tinggi, playlist eksklusif, dan pengalaman streaming yang stabil tanpa iklan.",
+    "plans": [
+      {
+        "duration": "1 Bulan (Sharing)",
+        "price": "Rp 28.000"
+      },
+      {
+        "duration": "3 Bulan (Sharing)",
+        "price": "Rp 70.000"
+      }
+    ],
+    "notes": [
+      "Akun Sharing disediakan oleh seller",
+      "Tidak diperbolehkan mengganti password atau pengaturan akun"
+    ]
+  },
+  "mojo pro": {
+    "title": "Mojo Pro Premium",
+    "is_ready": true,
+    "description": "Aplikasi editing video & story profesional dengan fitur lengkap, template premium, dan tanpa watermark.",
+    "plans": [
+      {
+        "duration": "1 Tahun (Sharing)",
+        "price": "Rp 38.000"
+      }
+    ],
+    "notes": [
+      "Akun Sharing disediakan oleh seller",
+      "Tidak diperbolehkan mengganti password atau pengaturan akun"
+    ]
+  },
+  "viki rakuten": {
+    "title": "Viki Rakuten Premium",
+    "is_ready": true,
+    "description": "Streaming drama Korea, Asia, dan variety show dengan kualitas HD serta subtitle lengkap.",
+    "plans": [
+      {
+        "duration": "1 Tahun (Standar)",
+        "price": "Rp 35.000"
+      },
+      {
+        "duration": "1 Tahun (Plus)",
+        "price": "Rp 52.000"
+      }
+    ],
+    "notes": [
+      "Akses Standar & Plus disediakan oleh seller",
+      "Tidak diperbolehkan mengganti password atau pengaturan akun",
+      "Fitur sesuai paket yang dipilih (Standar/Plus)"
+    ]
+  },
+  "genflix": {
+    "title": "Genflix Premium",
+    "is_ready": true,
+    "description": "Nikmati film, series, dan konten lokal dengan kualitas streaming yang stabil dan nyaman ditonton.",
+    "plans": [
+      {
+        "duration": "1 Bulan (Sharing)",
+        "price": "Rp 25.000"
+      }
+    ],
+    "notes": [
+      "Akun Sharing disediakan oleh seller",
+      "Tidak diperbolehkan mengganti password atau pengaturan akun"
+    ]
+  },
+  "picsart": {
+    "title": "PicsArt Premium",
+    "is_ready": true,
+    "description": "Edit foto & video dengan fitur lengkap, efek premium, font eksklusif, dan tanpa watermark.",
+    "plans": [
+      {
+        "duration": "1 Bulan (Sharing)",
+        "price": "Rp 20.000"
+      }
+    ],
+    "notes": [
+      "Akun Sharing disediakan oleh seller",
+      "Tidak diperbolehkan mengganti password atau pengaturan akun"
     ]
   }
 }

@@ -16,7 +16,12 @@ const aliases = {
   vnpro: "vn",
   "vn pro": "vn",
   "gamma ai": "gamma",
-  prime: "amazon"
+  prime: "amazon",
+  appletv: "apple tv",
+  "mango tv": "mango",
+  applemusic: "apple music",
+  mojo: "mojo pro",
+  viki: "viki rakuten",
 };
 
 async function startBot() {
@@ -43,7 +48,8 @@ async function startBot() {
 
     if (connection === "close") {
       const shouldReconnect =
-        lastDisconnect?.error?.output?.statusCode !== DisconnectReason.loggedOut;
+        lastDisconnect?.error?.output?.statusCode !==
+        DisconnectReason.loggedOut;
 
       console.log(
         "❌ Koneksi terputus. Reconnect:",
@@ -65,9 +71,7 @@ async function startBot() {
     const sender = isGroup ? msg.key.participant : from;
 
     const text =
-      msg.message.conversation ||
-      msg.message.extendedTextMessage?.text ||
-      "";
+      msg.message.conversation || msg.message.extendedTextMessage?.text || "";
 
     if (!text.trim()) return;
 
@@ -105,7 +109,7 @@ async function handleGroupMessage(sock, from, sender, text) {
     if (p.is_ready === false) {
       await delay();
       return sock.sendMessage(from, {
-        text: `${p.title}\nKosong ❌`
+        text: `${p.title}\nKosong ❌`,
       });
     }
 
@@ -114,7 +118,9 @@ async function handleGroupMessage(sock, from, sender, text) {
         .map((plan) => {
           if (plan.details && Array.isArray(plan.details)) {
             // format untuk TikTok
-            return `*${plan.type}*\n${plan.details.map((d) => `- ${d}`).join("\n\n")}`;
+            return `*${plan.type}*\n${plan.details
+              .map((d) => `- ${d}`)
+              .join("\n\n")}`;
           } else if (plan.duration && plan.price && !plan.isPromo) {
             // format umum
             return `- ${plan.duration} : *${plan.price}*`;
@@ -122,9 +128,8 @@ async function handleGroupMessage(sock, from, sender, text) {
             // format seperti CorelDraw / Vidio
             return `- ${plan.type} : *${plan.price}*`;
           } else if (plan.isPromo && plan.isPromo === true) {
-            return `\nPROMO\n- ${plan.duration} : *${plan.price}*`
-          }
-          else {
+            return `\nPROMO\n- ${plan.duration} : *${plan.price}*`;
+          } else {
             return ""; // fallback
           }
         })
@@ -132,10 +137,10 @@ async function handleGroupMessage(sock, from, sender, text) {
     }
     const notes = p.notes.map((n) => `• ${n}`).join("\n");
 
-    const featuresTitle = p.features_title ? `\n\n${p.features_title}` : '';
-    let features = '';
+    const featuresTitle = p.features_title ? `\n\n${p.features_title}` : "";
+    let features = "";
     if (p.features) {
-      features = p.features.map((f) => `+ ${f}`).join('\n');
+      features = p.features.map((f) => `+ ${f}`).join("\n");
     }
 
     await delay();
@@ -146,11 +151,10 @@ async function handleGroupMessage(sock, from, sender, text) {
     const key = aliases[lower] || lower;
     const p = products[key];
     if (p) {
-
       if (p.is_ready === false) {
         await delay();
         return sock.sendMessage(from, {
-          text: `${p.title}\nKosong ❌`
+          text: `${p.title}\nKosong ❌`,
         });
       }
 
@@ -160,7 +164,9 @@ async function handleGroupMessage(sock, from, sender, text) {
           .map((plan) => {
             if (plan.details && Array.isArray(plan.details)) {
               // format untuk TikTok
-              return `*${plan.type}*\n${plan.details.map((d) => `- ${d}`).join("\n")}`;
+              return `*${plan.type}*\n${plan.details
+                .map((d) => `- ${d}`)
+                .join("\n")}`;
             } else if (plan.duration && plan.price && !plan.isPromo) {
               // format umum
               return `- ${plan.duration} : *${plan.price}*`;
@@ -168,7 +174,7 @@ async function handleGroupMessage(sock, from, sender, text) {
               // format seperti CorelDraw / Vidio
               return `- ${plan.type} : *${plan.price}*`;
             } else if (plan.isPromo && plan.isPromo === true) {
-              return `\nPROMO\n- ${plan.duration} : *${plan.price}*`
+              return `\nPROMO\n- ${plan.duration} : *${plan.price}*`;
             } else {
               return ""; // fallback
             }
@@ -177,10 +183,10 @@ async function handleGroupMessage(sock, from, sender, text) {
       }
       const notes = p.notes.map((n) => `• ${n}`).join("\n");
 
-      const featuresTitle = p.features_title ? `\n\n${p.features_title}` : '';
-      let features = '';
+      const featuresTitle = p.features_title ? `\n\n${p.features_title}` : "";
+      let features = "";
       if (p.features) {
-        features = p.features.map((f) => `+ ${f}`).join('\n');
+        features = p.features.map((f) => `+ ${f}`).join("\n");
       }
 
       await delay();
@@ -215,7 +221,9 @@ async function handlePrivateMessage(sock, from, text) {
       plans = p.plans
         .map((plan) => {
           if (plan.details && Array.isArray(plan.details)) {
-            return `*${plan.type}*\n${plan.details.map((d) => `- ${d}`).join("\n")}`;
+            return `*${plan.type}*\n${plan.details
+              .map((d) => `- ${d}`)
+              .join("\n")}`;
           } else if (plan.duration && plan.price) {
             return `- ${plan.duration} : *${plan.price}*`;
           } else if (plan.type && plan.price) {
