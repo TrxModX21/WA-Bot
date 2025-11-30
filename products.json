@@ -115,7 +115,7 @@
     ]
   },
   "netflix": {
-    "title": "Netflix\nSemi Private",
+    "title": "Netflix",
     "is_ready": true,
     "description": "Region ID • 1 Profil = 1 Pengguna (tanpa VPN) • Anti Hold | Garansi Aktif | Support HD - 4K",
     "plans": [
@@ -247,22 +247,32 @@
     "notes": ["Tanpa Iklan", "Legal & Asli dari Bstation (bukan mod)"]
   },
   "chatgpt": {
-    "title": "ChatGPT Premium",
+    "title": "ChatGPT Plus Premium 5.0",
     "is_ready": true,
     "description": "Tersedia dua jenis akun: Sharing & Private dengan akses GPT Premium cepat dan stabil.",
     "plans": [
       {
-        "type": "Akun Sharing",
+        "type": "sharing",
         "duration": "1 Bulan (Sharing)",
         "price": "Rp 20.000"
       },
       {
-        "type": "Akun Private",
+        "type": "sharing",
+        "duration": "3 Bulan (Sharing)",
+        "price": "Rp 55.000"
+      },
+      {
+        "type": "private",
         "duration": "1 Bulan (Private)",
         "price": "Rp 55.000"
       },
       {
-        "type": "Akun Private",
+        "type": "private",
+        "duration": "3 Bulan (Private)",
+        "price": "Rp 150.000"
+      },
+      {
+        "type": "private",
         "duration": "1 Tahun (Private)",
         "price": "Rp 170.000"
       }
@@ -270,7 +280,8 @@
     "notes": [
       "Akun dari seller untuk versi Sharing",
       "Akun Sharing Dilarang Ganti Password",
-      "Akun pribadi untuk versi Private"
+      "Akun pribadi untuk versi Private",
+      "Untuk Jangka waktu 1 Tahun ChatGPT versi GO bukan Plus tapi tetap 5.0"
     ]
   },
   "gemini": {
@@ -292,7 +303,7 @@
         "price": "Rp 80.000"
       }
     ],
-    "notes": ["Akun pribadi", "Via invite family email"]
+    "notes": ["Akun pribadi", "Via invite family email", "Data tetap Private"]
   },
   "drive": {
     "title": "GDrive 2TB (BONUS VEO 3 + Gemini AI Pro)",
@@ -313,7 +324,7 @@
         "price": "Rp 80.000"
       }
     ],
-    "notes": ["Akun pribadi", "Via invite family email"]
+    "notes": ["Akun pribadi", "Via invite family email", "Data tetap Private"]
   },
   "veo": {
     "title": "VEO 3",
@@ -334,7 +345,7 @@
         "price": "Rp 80.000"
       }
     ],
-    "notes": ["Akun pribadi", "Via invite family email"]
+    "notes": ["Akun pribadi", "Via invite family email", "Data tetap Private"]
   },
   "leonardo": {
     "title": "Leonardo Ai Premium",

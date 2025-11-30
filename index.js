@@ -113,7 +113,19 @@ async function handleGroupMessage(sock, from, sender, text) {
       });
     }
 
-    if (p.plans && Array.isArray(p.plans)) {
+    if (lower === "chatgpt") {
+      const sharingPlans = p.plans
+        .filter((plan) => plan.type === "sharing")
+        .map((plan) => `* ${plan.duration} : ${plan.price}`)
+        .join("\n");
+
+      const privatePlans = p.plans
+        .filter((plan) => plan.type === "private")
+        .map((plan) => `* ${plan.duration} : ${plan.price}`)
+        .join("\n");
+
+      plans = `Sharing\n${sharingPlans}\n\nPrivate\n${privatePlans}`;
+    } else if (p.plans && Array.isArray(p.plans)) {
       plans = p.plans
         .map((plan) => {
           if (plan.details && Array.isArray(plan.details)) {
@@ -159,7 +171,19 @@ async function handleGroupMessage(sock, from, sender, text) {
       }
 
       let plans = "";
-      if (p.plans && Array.isArray(p.plans)) {
+      if (lower === "chatgpt") {
+        const sharingPlans = p.plans
+          .filter((plan) => plan.type === "sharing")
+          .map((plan) => `* ${plan.duration} : ${plan.price}`)
+          .join("\n");
+
+        const privatePlans = p.plans
+          .filter((plan) => plan.type === "private")
+          .map((plan) => `* ${plan.duration} : ${plan.price}`)
+          .join("\n");
+
+        plans = `Sharing\n${sharingPlans}\n\nPrivate\n${privatePlans}`;
+      } else if (p.plans && Array.isArray(p.plans)) {
         plans = p.plans
           .map((plan) => {
             if (plan.details && Array.isArray(plan.details)) {
