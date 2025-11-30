@@ -116,12 +116,12 @@ async function handleGroupMessage(sock, from, sender, text) {
     if (lower === "chatgpt") {
       const sharingPlans = p.plans
         .filter((plan) => plan.type === "sharing")
-        .map((plan) => `* ${plan.duration} : ${plan.price}`)
+        .map((plan) => `- ${plan.duration} : *${plan.price}*`)
         .join("\n");
 
       const privatePlans = p.plans
         .filter((plan) => plan.type === "private")
-        .map((plan) => `* ${plan.duration} : ${plan.price}`)
+        .map((plan) => `- ${plan.duration} : *${plan.price}*`)
         .join("\n");
 
       plans = `Sharing\n${sharingPlans}\n\nPrivate\n${privatePlans}`;
@@ -174,12 +174,12 @@ async function handleGroupMessage(sock, from, sender, text) {
       if (lower === "chatgpt") {
         const sharingPlans = p.plans
           .filter((plan) => plan.type === "sharing")
-          .map((plan) => `* ${plan.duration} : ${plan.price}`)
+          .map((plan) => `- ${plan.duration} : *${plan.price}*`)
           .join("\n");
 
         const privatePlans = p.plans
           .filter((plan) => plan.type === "private")
-          .map((plan) => `* ${plan.duration} : ${plan.price}`)
+          .map((plan) => `- ${plan.duration} : *${plan.price}*`)
           .join("\n");
 
         plans = `Sharing\n${sharingPlans}\n\nPrivate\n${privatePlans}`;
