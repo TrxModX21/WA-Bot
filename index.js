@@ -22,6 +22,7 @@ const aliases = {
   applemusic: "apple music",
   mojo: "mojo pro",
   viki: "viki rakuten",
+  "alight motion": "alightmotion"
 };
 
 async function startBot() {
