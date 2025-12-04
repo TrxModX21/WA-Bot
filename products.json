@@ -125,7 +125,7 @@
       },
       {
         "duration": "3 Bulan",
-        "price": "Rp 70.000"
+        "price": "Rp 80.000"
       }
     ],
     "notes": [
@@ -247,7 +247,7 @@
     "notes": ["Tanpa Iklan", "Legal & Asli dari Bstation (bukan mod)"]
   },
   "chatgpt": {
-    "title": "ChatGPT Plus Premium 5.0",
+    "title": "ChatGPT Plus Premium 5.1",
     "is_ready": true,
     "description": "Tersedia dua jenis akun: Sharing & Private dengan akses GPT Premium cepat dan stabil.",
     "plans": [
@@ -281,7 +281,7 @@
       "Akun dari seller untuk versi Sharing",
       "Akun Sharing Dilarang Ganti Password",
       "Akun pribadi untuk versi Private",
-      "Untuk Jangka waktu 1 Tahun ChatGPT versi GO bukan Plus tapi tetap 5.0"
+      "Untuk Jangka waktu 1 Tahun ChatGPT versi GO bukan Plus tapi tetap 5.1"
     ]
   },
   "gemini": {

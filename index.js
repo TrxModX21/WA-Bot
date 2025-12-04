@@ -133,7 +133,7 @@ async function handleGroupMessage(sock, from, sender, text) {
             // format untuk TikTok
             return `*${plan.type}*\n${plan.details
               .map((d) => `- ${d}`)
-              .join("\n\n")}`;
+              .join("\n")}`;
           } else if (plan.duration && plan.price && !plan.isPromo) {
             // format umum
             return `- ${plan.duration} : *${plan.price}*`;
