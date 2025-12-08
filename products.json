@@ -823,5 +823,47 @@
       "Akun Sharing disediakan oleh seller",
       "Tidak diperbolehkan mengganti password atau pengaturan akun"
     ]
+  },
+  "wetv": {
+    "title": "We TV",
+    "is_ready": true,
+    "description": null,
+    "plans": [
+      {
+        "type": "sharing",
+        "duration": "1 Bulan",
+        "price": "Rp 25.000"
+      },
+      {
+        "type": "sharing",
+        "duration": "2 Bulan",
+        "price": "Rp 40.000"
+      },
+      {
+        "type": "sharing",
+        "duration": "3 Bulan",
+        "price": "Rp 50.000"
+      },
+      {
+        "type": "private",
+        "duration": "1 Bulan",
+        "price": "Rp 45.000"
+      },
+      {
+        "type": "private",
+        "duration": "2 Bulan",
+        "price": "Rp 80.000"
+      },
+      {
+        "type": "private",
+        "duration": "3 Bulan",
+        "price": "Rp 110.000"
+      }
+    ],
+    "notes": [
+      "Sharing hanya bisa 1 Device",
+      "Private bisa 4-5 Device",
+      "Akun Fresh semua full garansi"
+    ]
   }
 }

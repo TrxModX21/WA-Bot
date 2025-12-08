@@ -22,7 +22,8 @@ const aliases = {
   applemusic: "apple music",
   mojo: "mojo pro",
   viki: "viki rakuten",
-  "alight motion": "alightmotion"
+  "alight motion": "alightmotion",
+  "we tv": "wetv",
 };
 
 async function startBot() {
@@ -81,14 +82,14 @@ async function startBot() {
     );
 
     if (isGroup) {
-      await handleGroupMessage(sock, from, sender, text);
+      await handleGroupMessage(sock, from, sender, text, msg);
     } else {
-      await handlePrivateMessage(sock, from, text);
+      await handlePrivateMessage(sock, from, text, msg);
     }
   });
 }
 
-async function handleGroupMessage(sock, from, sender, text) {
+async function handleGroupMessage(sock, from, sender, text, msg) {
   const lower = text.toLowerCase();
 
   if (lower === "!menu") {
@@ -102,6 +103,7 @@ async function handleGroupMessage(sock, from, sender, text) {
     await delay();
     await sock.sendMessage(from, {
       text: `📋 *Menu Produk Tersedia:*\n\n${list}\n\n*ketik nama produk\n(contoh: *youtube*) untuk lihat detailnya.\n\n*Untuk pemesanan bisa langsung hubungi admin 082312300176\n(Admin Software Murah)`,
+      quoted: msg,
     });
   } else if (products[lower]) {
     const p = products[lower];
@@ -111,10 +113,11 @@ async function handleGroupMessage(sock, from, sender, text) {
       await delay();
       return sock.sendMessage(from, {
         text: `${p.title}\nKosong ❌`,
+        quoted: msg,
       });
     }
 
-    if (lower === "chatgpt") {
+    if (lower === "chatgpt" || lower === "wetv") {
       const sharingPlans = p.plans
         .filter((plan) => plan.type === "sharing")
         .map((plan) => `- ${plan.duration} : *${plan.price}*`)
@@ -156,9 +159,15 @@ async function handleGroupMessage(sock, from, sender, text) {
       features = p.features.map((f) => `+ ${f}`).join("\n");
     }
 
+    let description = "";
+    if (p.description) {
+      description = `${p.description}\n\n`;
+    }
+
     await delay();
     await sock.sendMessage(from, {
-      text: `${p.title}\n\n${p.description}\n\n${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`,
+      text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`,
+      quoted: msg,
     });
   } else {
     const key = aliases[lower] || lower;
@@ -168,6 +177,7 @@ async function handleGroupMessage(sock, from, sender, text) {
         await delay();
         return sock.sendMessage(from, {
           text: `${p.title}\nKosong ❌`,
+          quoted: msg,
         });
       }
 
@@ -214,21 +224,28 @@ async function handleGroupMessage(sock, from, sender, text) {
         features = p.features.map((f) => `+ ${f}`).join("\n");
       }
 
+      let description = "";
+      if (p.description) {
+        description = `${p.description}\n\n`;
+      }
+
       await delay();
       await sock.sendMessage(from, {
-        text: `${p.title}\n\n${p.description}\n\n${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`,
+        text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`,
+        quoted: msg,
       });
     }
   }
 }
 
-async function handlePrivateMessage(sock, from, text) {
+async function handlePrivateMessage(sock, from, text, msg) {
   const lower = text.toLowerCase();
 
   if (lower === "halo") {
     await delay();
     await sock.sendMessage(from, {
       text: "Hai 👋, ini bot otomatis! Ketik *!menu* untuk melihat daftar produk.",
+      quoted: msg,
     });
   } else if (lower === "!menu") {
     const list = Object.keys(products)
@@ -238,6 +255,7 @@ async function handlePrivateMessage(sock, from, text) {
     await delay();
     await sock.sendMessage(from, {
       text: `📦 *Daftar Produk Kami:*\n\n${list}\n\nKetik nama produk (contoh: *youtube*) untuk lihat detailnya.\nUntuk pemesanan bisa langsung hubungi admin\n082312300176 (Admin Software Murah)`,
+      quoted: msg,
     });
   } else if (products[lower]) {
     const p = products[lower];
@@ -264,6 +282,7 @@ async function handlePrivateMessage(sock, from, text) {
     await delay();
     await sock.sendMessage(from, {
       text: `${p.title}\n\n${p.description}\n\n${plans}\n\n${notes}`,
+      quoted: msg,
     });
   } else if (lower === "ping") {
     await delay();
