@@ -103,7 +103,10 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
     await delay();
     await sock.sendMessage(from, {
       text: `📋 *Menu Produk Tersedia:*\n\n${list}\n\n*ketik nama produk\n(contoh: *youtube*) untuk lihat detailnya.\n\n*Untuk pemesanan bisa langsung hubungi admin 082312300176\n(Admin Software Murah)`,
-      quoted: msg,
+      quoted: {
+        key: msg.key,
+        message: msg.message,
+      },
     });
   } else if (products[lower]) {
     const p = products[lower];
@@ -113,7 +116,10 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       await delay();
       return sock.sendMessage(from, {
         text: `${p.title}\nKosong ❌`,
-        quoted: msg,
+        quoted: {
+          key: msg.key,
+          message: msg.message,
+        },
       });
     }
 
@@ -167,7 +173,10 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
     await delay();
     await sock.sendMessage(from, {
       text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`,
-      quoted: msg,
+      quoted: {
+        key: msg.key,
+        message: msg.message,
+      },
     });
   } else {
     const key = aliases[lower] || lower;
@@ -177,7 +186,10 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
         await delay();
         return sock.sendMessage(from, {
           text: `${p.title}\nKosong ❌`,
-          quoted: msg,
+          quoted: {
+            key: msg.key,
+            message: msg.message,
+          },
         });
       }
 
@@ -232,7 +244,10 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       await delay();
       await sock.sendMessage(from, {
         text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`,
-        quoted: msg,
+        quoted: {
+          key: msg.key,
+          message: msg.message,
+        },
       });
     }
   }
@@ -245,7 +260,10 @@ async function handlePrivateMessage(sock, from, text, msg) {
     await delay();
     await sock.sendMessage(from, {
       text: "Hai 👋, ini bot otomatis! Ketik *!menu* untuk melihat daftar produk.",
-      quoted: msg,
+      quoted: {
+        key: msg.key,
+        message: msg.message,
+      },
     });
   } else if (lower === "!menu") {
     const list = Object.keys(products)
@@ -255,7 +273,10 @@ async function handlePrivateMessage(sock, from, text, msg) {
     await delay();
     await sock.sendMessage(from, {
       text: `📦 *Daftar Produk Kami:*\n\n${list}\n\nKetik nama produk (contoh: *youtube*) untuk lihat detailnya.\nUntuk pemesanan bisa langsung hubungi admin\n082312300176 (Admin Software Murah)`,
-      quoted: msg,
+      quoted: {
+        key: msg.key,
+        message: msg.message,
+      },
     });
   } else if (products[lower]) {
     const p = products[lower];
@@ -282,7 +303,10 @@ async function handlePrivateMessage(sock, from, text, msg) {
     await delay();
     await sock.sendMessage(from, {
       text: `${p.title}\n\n${p.description}\n\n${plans}\n\n${notes}`,
-      quoted: msg,
+      quoted: {
+        key: msg.key,
+        message: msg.message,
+      },
     });
   } else if (lower === "ping") {
     await delay();
