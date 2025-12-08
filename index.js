@@ -117,7 +117,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       });
     }
 
-    if (lower === "chatgpt" || lower === "wetv") {
+    if (lower === "chatgpt" || lower === "wetv" || lower === "we tv") {
       const sharingPlans = p.plans
         .filter((plan) => plan.type === "sharing")
         .map((plan) => `- ${plan.duration} : *${plan.price}*`)
