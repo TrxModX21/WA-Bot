@@ -182,7 +182,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       }
 
       let plans = "";
-      if (lower === "chatgpt") {
+      if (lower === "chatgpt" || lower === "we tv" || lower === "wetv") {
         const sharingPlans = p.plans
           .filter((plan) => plan.type === "sharing")
           .map((plan) => `- ${plan.duration} : *${plan.price}*`)
