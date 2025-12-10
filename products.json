@@ -14,6 +14,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Via Invite Family Pro",
       "Bisa pakai email sendiri",
       "Sudah termasuk YouTube Music Premium"
@@ -38,6 +39,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Tanpa iklan",
       "Akun baru(private, bukan sharing)",
       "Legal & asli dari Spotify(bukan mod)"
@@ -66,6 +68,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Langsung aktif setelah pembayaran",
       "Tanpa ribet dan tanpa watermark!"
     ]
@@ -92,7 +95,11 @@
         "price": "Rp 35.000"
       }
     ],
-    "notes": ["Langsung aktif setelah pembayaran", "Bisa pakai akun sendiri"]
+    "notes": [
+      "Garansi ON",
+      "Langsung aktif setelah pembayaran",
+      "Bisa pakai akun sendiri"
+    ]
   },
   "loklok": {
     "title": "LOKLOK Sharing",
@@ -109,6 +116,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Akun login seperti biasa",
       "Dilarang ganti password",
       "Tidak bisa login di TV"
@@ -129,6 +137,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Tidak boleh mengganti email/password atau menambah nomor HP",
       "Tidak boleh mengubah membership/langganan",
       "Melanggar = Garansi otomatis hangus"
@@ -156,7 +165,12 @@
         "price": "Rp 65.000"
       }
     ],
-    "notes": ["Login dengan email", "Support Android & iOS", "Akun private"]
+    "notes": [
+      "Garansi ON",
+      "Login dengan email",
+      "Support Android & iOS",
+      "Akun private"
+    ]
   },
   "amazon": {
     "title": "Amazon Prime Video",
@@ -177,6 +191,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Bisa login di 3 device",
       "Tanpa perlu VPN, tersedia Subtitle Indonesia",
       "Bisa di semua platform (Android, iOS, Windows) via aplikasi atau web"
@@ -193,6 +208,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Akun pribadi kamu sendiri",
       "Proses 1–60 menit",
       "Bonus fitur: Apple Music, TV, Arcade, Relay, Fitness"
@@ -221,6 +237,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Gratis panduan",
       "Dilarang Ganti Password",
       "Akun lifetime garansi hingga 12 bulan"
@@ -244,7 +261,11 @@
         "price": "kosong ❌"
       }
     ],
-    "notes": ["Tanpa Iklan", "Legal & Asli dari Bstation (bukan mod)"]
+    "notes": [
+      "Garansi ON",
+      "Tanpa Iklan",
+      "Legal & Asli dari Bstation (bukan mod)"
+    ]
   },
   "chatgpt": {
     "title": "ChatGPT Plus Premium 5.1",
@@ -278,6 +299,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Akun dari seller untuk versi Sharing",
       "Akun Sharing Dilarang Ganti Password",
       "Akun pribadi untuk versi Private",
@@ -303,7 +325,12 @@
         "price": "Rp 80.000"
       }
     ],
-    "notes": ["Akun pribadi", "Via invite family email", "Data tetap Private"]
+    "notes": [
+      "Garansi ON",
+      "Akun pribadi",
+      "Via invite family email",
+      "Data tetap Private"
+    ]
   },
   "drive": {
     "title": "GDrive 2TB (BONUS VEO 3 + Gemini AI Pro)",
@@ -324,7 +351,12 @@
         "price": "Rp 80.000"
       }
     ],
-    "notes": ["Akun pribadi", "Via invite family email", "Data tetap Private"]
+    "notes": [
+      "Garansi ON",
+      "Akun pribadi",
+      "Via invite family email",
+      "Data tetap Private"
+    ]
   },
   "veo": {
     "title": "VEO 3",
@@ -345,7 +377,12 @@
         "price": "Rp 80.000"
       }
     ],
-    "notes": ["Akun pribadi", "Via invite family email", "Data tetap Private"]
+    "notes": [
+      "Garansi ON",
+      "Akun pribadi",
+      "Via invite family email",
+      "Data tetap Private"
+    ]
   },
   "leonardo": {
     "title": "Leonardo Ai Premium",
@@ -358,6 +395,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Akun dari seller",
       "Dilarang mengganti password",
       "Unlimited Generate TEKS to IMAGE"
@@ -378,6 +416,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Tutorial instalasi sudah ada di soft file",
       "Jika beli soft file saja, tidak menerima tutorial berupa tindakan",
       "Garansi seumur hidup jika + instalasi via remote"
@@ -394,6 +433,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Tanpa Iklan - Kualitas 4K UHD",
       "Legal & Asli dari Disney+ (bukan mod)",
       "Support SmartTV"
@@ -413,7 +453,7 @@
         "price": "Rp 35.000"
       }
     ],
-    "notes": ["Bisa akun pribadi"]
+    "notes": ["Garansi ON", "Bisa akun pribadi"]
   },
   "remini": {
     "title": "Remini Premium",
@@ -425,7 +465,11 @@
         "price": "Rp 35.000"
       }
     ],
-    "notes": ["Legal & Asli dari Remini", "Support Web/iOS/Android"]
+    "notes": [
+      "Garansi ON",
+      "Legal & Asli dari Remini",
+      "Support Web/iOS/Android"
+    ]
   },
   "vidio": {
     "title": "VIDIO Premium",
@@ -457,11 +501,16 @@
         "price": "Rp 36.000"
       }
     ],
-    "notes": ["Tonton tanpa iklan", "Kualitas HD", "Legal resmi dari Vidio"]
+    "notes": [
+      "Garansi ON",
+      "Tonton tanpa iklan",
+      "Kualitas HD",
+      "Legal resmi dari Vidio"
+    ]
   },
   "tiktok": {
     "title": "TikTok Services",
-    "is_ready": true,
+    "is_ready": false,
     "description": "Layanan followers, likes, views, dan share TikTok cepat & aman",
     "plans": [
       {
@@ -503,6 +552,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Selama proses harap tidak di Private",
       "Jangan ubah username saat pesanan diproses",
       "Proses cepat (maks 1x24 jam)",
@@ -528,6 +578,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Selama proses harap tidak di Private",
       "Jangan ubah username saat pesanan diproses",
       "Country mix world | Asia | Eropa"
@@ -572,6 +623,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "jangan ubah data apapun pada akun",
       "jangan menggunakan lebih perangkat atau akun akan mati"
     ]
@@ -591,6 +643,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Dilarang Mengganti Password",
       "Dilarang mengganti settingan apapun"
     ]
@@ -610,6 +663,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Premium Biasa (Bukan Premium Plus+)",
       "1 Akun 1 Orang (Akun Privat)",
       "Bukan Akun MOD/Ilegal (bukan curian)"
@@ -630,6 +684,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Tanpa Iklan",
       "Legal & Asli dari IQIYI (bukan mod)",
       "Hanya boleh login 1 Device"
@@ -649,7 +704,7 @@
         "price": "Rp 50.000"
       }
     ],
-    "notes": ["akun dari seller", "dilarang mengganti pw"],
+    "notes": ["Garansi ON", "akun dari seller", "dilarang mengganti pw"],
     "features_title": "FITUR zoom",
     "features": [
       "100 participant",
@@ -676,6 +731,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Akun Sharing disediakan oleh seller",
       "Dilarang mengganti password/setting pada akun Sharing",
       "Private berupa akun pribadi khusus untuk pembeli",
@@ -697,6 +753,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Akun Sharing dari seller",
       "Dilarang mengganti password maupun pengaturan akun"
     ]
@@ -720,6 +777,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Akun Sharing & Unlimited berasal dari seller",
       "Dilarang mengganti password atau pengaturan akun Sharing/Unlimited",
       "Private berupa akun pribadi khusus untuk pembeli"
@@ -736,6 +794,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Akun Sharing dari seller",
       "Dilarang mengganti password atau pengaturan akun"
     ]
@@ -755,6 +814,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Akun Sharing disediakan oleh seller",
       "Tidak diperbolehkan mengganti password atau pengaturan akun"
     ]
@@ -770,6 +830,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Akun Sharing disediakan oleh seller",
       "Tidak diperbolehkan mengganti password atau pengaturan akun"
     ]
@@ -789,6 +850,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Akses Standar & Plus disediakan oleh seller",
       "Tidak diperbolehkan mengganti password atau pengaturan akun",
       "Fitur sesuai paket yang dipilih (Standar/Plus)"
@@ -805,6 +867,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Akun Sharing disediakan oleh seller",
       "Tidak diperbolehkan mengganti password atau pengaturan akun"
     ]
@@ -820,6 +883,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Akun Sharing disediakan oleh seller",
       "Tidak diperbolehkan mengganti password atau pengaturan akun"
     ]
@@ -861,6 +925,7 @@
       }
     ],
     "notes": [
+      "Garansi ON",
       "Sharing hanya bisa 1 Device",
       "Private bisa 4-5 Device",
       "Akun Fresh semua full garansi"
