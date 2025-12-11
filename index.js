@@ -123,7 +123,12 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       });
     }
 
-    if (lower === "chatgpt" || lower === "we tv" || lower === "wetv") {
+    if (
+      lower === "chatgpt" ||
+      lower === "we tv" ||
+      lower === "wetv" ||
+      lower === "vidio"
+    ) {
       const sharingPlans = p.plans
         .filter((plan) => plan.type === "sharing")
         .map((plan) => `- ${plan.duration} : *${plan.price}*`)
@@ -134,7 +139,11 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
         .map((plan) => `- ${plan.duration} : *${plan.price}*`)
         .join("\n");
 
-      plans = `Sharing\n${sharingPlans}\n\nPrivate\n${privatePlans}`;
+      if (lower === "vidio") {
+        plans = `Paket Sharing:\n${sharingPlans}\n\nPaket Private:\n${privatePlans}\n\n*Tonton tanpa iklan, kualitas HD, dan legal resmi dari Vidio!`;
+      } else {
+        plans = `Sharing\n${sharingPlans}\n\nPrivate\n${privatePlans}`;
+      }
     } else if (p.plans && Array.isArray(p.plans)) {
       plans = p.plans
         .map((plan) => {
@@ -194,7 +203,12 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       }
 
       let plans = "";
-      if (lower === "chatgpt" || lower === "we tv" || lower === "wetv") {
+      if (
+        lower === "chatgpt" ||
+        lower === "we tv" ||
+        lower === "wetv" ||
+        lower === "vidio"
+      ) {
         const sharingPlans = p.plans
           .filter((plan) => plan.type === "sharing")
           .map((plan) => `- ${plan.duration} : *${plan.price}*`)
@@ -205,7 +219,11 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
           .map((plan) => `- ${plan.duration} : *${plan.price}*`)
           .join("\n");
 
-        plans = `Sharing\n${sharingPlans}\n\nPrivate\n${privatePlans}`;
+        if (lower === "vidio") {
+          plans = `Paket Sharing:\n${sharingPlans}\n\nPaket Private:\n${privatePlans}\n\n*Tonton tanpa iklan, kualitas HD, dan legal resmi dari Vidio!`;
+        } else {
+          plans = `Sharing\n${sharingPlans}\n\nPrivate\n${privatePlans}`;
+        }
       } else if (p.plans && Array.isArray(p.plans)) {
         plans = p.plans
           .map((plan) => {

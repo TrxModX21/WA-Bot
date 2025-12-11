@@ -1,16 +1,16 @@
 {
   "youtube": {
-    "title": "YouTube Premium",
+    "title": "YouTube Premium - Promo Spesial 12.12",
     "is_ready": true,
     "description": "Langganan hemat untuk YouTube Premium dan YouTube Music tanpa iklan 🎧",
     "plans": [
       {
         "duration": "1 Bulan",
-        "price": "Rp 20.000"
+        "price": "Rp 14.000"
       },
       {
         "duration": "2 Bulan",
-        "price": "Rp 35.000"
+        "price": "Rp 24.000"
       }
     ],
     "notes": [
@@ -46,7 +46,7 @@
     ]
   },
   "capcut": {
-    "title": "CapCut Pro",
+    "title": "CapCut Pro - Promo Spesial 12.12",
     "is_ready": true,
     "description": "Untuk iOS, Android, dan PC (Mac & Windows). Versi berkualitas, 100% siap pakai!",
     "plans": [
@@ -56,15 +56,15 @@
       },
       {
         "duration": "1 Bulan",
-        "price": "Rp 25.000"
+        "price": "Rp 19.000"
       },
       {
         "duration": "3 Bulan",
-        "price": "Rp 65.000"
+        "price": "Rp 47.000"
       },
       {
         "duration": "1 Tahun",
-        "price": "Rp 240.000"
+        "price": "Rp 174.000"
       }
     ],
     "notes": [
@@ -268,19 +268,19 @@
     ]
   },
   "chatgpt": {
-    "title": "ChatGPT Plus Premium 5.1",
+    "title": "ChatGPT Plus Premium 5.1 - Promo Spesial 12.12",
     "is_ready": true,
     "description": "Tersedia dua jenis akun: Sharing & Private dengan akses GPT Premium cepat dan stabil.",
     "plans": [
       {
         "type": "sharing",
         "duration": "1 Bulan (Sharing)",
-        "price": "Rp 20.000"
+        "price": "Rp 18.000"
       },
       {
         "type": "sharing",
         "duration": "3 Bulan (Sharing)",
-        "price": "Rp 55.000"
+        "price": "Rp 44.000"
       },
       {
         "type": "private",
@@ -333,17 +333,17 @@
     ]
   },
   "drive": {
-    "title": "GDrive 2TB (BONUS VEO 3 + Gemini AI Pro)",
+    "title": "GDrive 2TB (BONUS VEO 3 + Gemini AI Pro) - Promo Spesial 12.12",
     "is_ready": true,
     "description": "Semi Private • Akses paket Google Drive 2TB dengan Bonus Paket - Veo 3 dan Gemini Ai Pro",
     "plans": [
       {
         "duration": "1 Bulan",
-        "price": "Rp 20.000"
+        "price": "Rp 18.000"
       },
       {
         "duration": "2 Bulan",
-        "price": "Rp 35.000"
+        "price": "Rp 30.000"
       },
       {
         "isPromo": true,
@@ -472,33 +472,39 @@
     ]
   },
   "vidio": {
-    "title": "VIDIO Premium",
+    "title": "VIDIO Premium - Paket 1 Bulan",
     "is_ready": true,
     "description": "Streaming tanpa iklan dan kualitas HD resmi dari Vidio",
     "plans": [
       {
-        "type": "Sharing - Mobile / TV",
-        "price": "Rp 35.000"
+        "type": "sharing",
+        "duration": "Mobile",
+        "price": "Rp 30.000"
       },
       {
-        "type": "Sharing - TV Only",
-        "price": "Rp 17.000"
+        "type": "sharing",
+        "duration": "TV Only",
+        "price": "Rp 20.000"
       },
       {
-        "type": "Sharing - Mobile Only",
-        "price": "Rp 26.000"
+        "type": "sharing",
+        "duration": "All Device",
+        "price": "kosong ❌"
       },
       {
-        "type": "Private - Mobile / TV",
-        "price": "Rp 50.000"
+        "type": "private",
+        "duration": "Mobile",
+        "price": "Rp 45.000"
       },
       {
-        "type": "Private - TV Only",
-        "price": "Rp 26.000"
+        "type": "private",
+        "duration": "TV Only",
+        "price": "Rp 29.000"
       },
       {
-        "type": "Private - Mobile Only",
-        "price": "Rp 36.000"
+        "type": "private",
+        "duration": "All Device",
+        "price": "Rp 55.000"
       }
     ],
     "notes": [
