@@ -221,19 +221,15 @@
     "plans": [
       {
         "duration": "1 Bulan",
-        "price": "Rp 10.000"
+        "price": "Rp 17.000"
       },
       {
         "duration": "3 Bulan",
-        "price": "Rp 25.000"
-      },
-      {
-        "duration": "6 Bulan",
-        "price": "Rp 35.000"
+        "price": "Rp 37.000"
       },
       {
         "duration": "Lifetime",
-        "price": "Rp 60.000"
+        "price": "Rp 55.000"
       }
     ],
     "notes": [
