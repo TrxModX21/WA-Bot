@@ -303,7 +303,7 @@
     ]
   },
   "gemini": {
-    "title": "Gemini Ai Pro (BONUS VEO 3 + GDrive 2TB)",
+    "title": "Gemini Ai Pro (BONUS VEO 3 + GDrive 2TB + NotebookLM) - Promo Spesial 12.12",
     "is_ready": true,
     "description": "Semi Private • Akses paket Gemini AI Pro dengan Bonus Paket - Veo 3 dan Google Drive 2TB",
     "plans": [
@@ -329,7 +329,7 @@
     ]
   },
   "drive": {
-    "title": "GDrive 2TB (BONUS VEO 3 + Gemini AI Pro) - Promo Spesial 12.12",
+    "title": "GDrive 2TB (BONUS : VEO 3 + Gemini AI Pro + NotebookLM) - Promo Spesial 12.12",
     "is_ready": true,
     "description": "Semi Private • Akses paket Google Drive 2TB dengan Bonus Paket - Veo 3 dan Gemini Ai Pro",
     "plans": [
@@ -355,7 +355,7 @@
     ]
   },
   "veo": {
-    "title": "VEO 3",
+    "title": "VEO 3 (BONUS GDrive 2TB + Gemini Ai Pro + NotebookLM) - Promo Spesial 12.12",
     "is_ready": true,
     "description": "Semi Private • Akses paket Veo 3 dengan Bonus Paket - Google Drive 2TB dan Gemini Ai Pro",
     "plans": [
