@@ -179,9 +179,11 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       description = `${p.description}\n\n`;
     }
 
+    const messageText = `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`;
     await delay();
     await sock.sendMessage(from, {
-      text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`,
+      image: p.banner ? fs.readFileSync(p.banner) : undefined,
+      caption: messageText,
       quoted: {
         key: msg.key,
         message: msg.message,
@@ -259,9 +261,8 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
         description = `${p.description}\n\n`;
       }
 
-      await delay();
       const messageText = `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`;
-
+      await delay();
       await sock.sendMessage(from, {
         image: p.banner ? fs.readFileSync(p.banner) : undefined,
         caption: messageText,
