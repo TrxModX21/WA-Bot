@@ -261,6 +261,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
 
       await delay();
       await sock.sendMessage(from, {
+        image: p.banner ? fs.readFileSync(p.banner) : undefined,
         text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`,
         quoted: {
           key: msg.key,

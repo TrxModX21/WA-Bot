@@ -20,6 +20,29 @@
       "Sudah termasuk YouTube Music Premium"
     ]
   },
+  "testing": {
+    "title": "testing",
+    "banner": "./banners/testing.jpg",
+    "is_ready": true,
+    "description": "Langganan hemat untuk YouTube Premium dan YouTube Music tanpa iklan 🎧",
+    "plans": [
+      {
+        "duration": "1 Bulan",
+        "price": "Rp 14.000"
+      },
+      {
+        "duration": "2 Bulan",
+        "price": "Rp 24.000"
+      }
+    ],
+    "notes": [
+      "Garansi ON",
+      "Via Invite Family Pro",
+      "Bisa pakai email sendiri",
+      "Sudah termasuk YouTube Music Premium"
+    ]
+  },
+
   "spotify": {
     "title": "Spotify Premium Private",
     "is_ready": true,
