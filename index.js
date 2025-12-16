@@ -321,6 +321,7 @@ async function handlePrivateMessage(sock, from, text, msg) {
 
     await delay();
     await sock.sendMessage(from, {
+      image: p.banner ? fs.readFileSync(p.banner) : undefined,
       text: `${p.title}\n\n${p.description}\n\n${plans}\n\n${notes}`,
       quoted: {
         key: msg.key,
