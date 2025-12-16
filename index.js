@@ -260,14 +260,24 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       }
 
       await delay();
+      const messageText = `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`;
+
       await sock.sendMessage(from, {
         image: p.banner ? fs.readFileSync(p.banner) : undefined,
-        text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`,
+        caption: messageText,
         quoted: {
           key: msg.key,
           message: msg.message,
         },
       });
+
+      // await sock.sendMessage(from, {
+      //   text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`,
+      //   quoted: {
+      //     key: msg.key,
+      //     message: msg.message,
+      //   },
+      // });
     }
   }
 }
@@ -321,7 +331,6 @@ async function handlePrivateMessage(sock, from, text, msg) {
 
     await delay();
     await sock.sendMessage(from, {
-      image: p.banner ? fs.readFileSync(p.banner) : undefined,
       text: `${p.title}\n\n${p.description}\n\n${plans}\n\n${notes}`,
       quoted: {
         key: msg.key,
