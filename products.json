@@ -516,7 +516,7 @@
     "description": "Layanan followers, likes, views, dan share TikTok cepat & aman",
     "plans": [
       {
-        "type": "Followers",
+        "type": "TIKTOK FOLLOWER",
         "is_ready": true,
         "details": [
           "500 Followers = Rp 65.000",
@@ -526,7 +526,7 @@
         ]
       },
       {
-        "type": "Likes",
+        "type": "LIKE TIKTOK",
         "is_ready": true,
         "details": [
           "1000 Like = Rp 15.000",
@@ -536,7 +536,7 @@
         ]
       },
       {
-        "type": "Views",
+        "type": "TIKTOK VIEW",
         "is_ready": true,
         "details": [
           "10.000 View = Rp 15.000",
@@ -548,7 +548,7 @@
         ]
       },
       {
-        "type": "Shares",
+        "type": "TIKTOK SHARE",
         "is_ready": false,
         "details": [
           "1000 Share = Rp 15.000",
