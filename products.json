@@ -475,7 +475,7 @@
       {
         "type": "sharing",
         "duration": "Mobile",
-        "price": "Rp 30.000"
+        "price": "Rp 27.000"
       },
       {
         "type": "sharing",
@@ -485,12 +485,12 @@
       {
         "type": "sharing",
         "duration": "All Device",
-        "price": "kosong ❌"
+        "price": "Rp 34.000"
       },
       {
         "type": "private",
         "duration": "Mobile",
-        "price": "Rp 45.000"
+        "price": "Rp 42.000"
       },
       {
         "type": "private",
@@ -500,7 +500,7 @@
       {
         "type": "private",
         "duration": "All Device",
-        "price": "Rp 55.000"
+        "price": "Rp 50.000"
       }
     ],
     "notes": [
@@ -512,28 +512,32 @@
   },
   "tiktok": {
     "title": "TikTok Services",
-    "is_ready": false,
+    "is_ready": true,
     "description": "Layanan followers, likes, views, dan share TikTok cepat & aman",
     "plans": [
       {
         "type": "Followers",
+        "is_ready": true,
         "details": [
-          "100 Followers = Rp 25.000",
-          "500 Followers = Rp 37.000",
-          "1000 Followers = Rp 65.000"
+          "500 Followers = Rp 65.000",
+          "1000 Followers = Rp 110.000",
+          "2000 Followers = Rp 190.000",
+          "3000 Followers = Rp 265.000"
         ]
       },
       {
         "type": "Likes",
+        "is_ready": true,
         "details": [
           "1000 Like = Rp 15.000",
-          "2000 Like = Rp 25.000",
-          "3000 Like = Rp 35.000",
+          "2000 Like = Rp 26.000",
+          "3000 Like = Rp 36.000",
           "5000 Like = Rp 45.000"
         ]
       },
       {
         "type": "Views",
+        "is_ready": true,
         "details": [
           "10.000 View = Rp 15.000",
           "30.000 View = Rp 25.000",
@@ -545,6 +549,7 @@
       },
       {
         "type": "Shares",
+        "is_ready": false,
         "details": [
           "1000 Share = Rp 15.000",
           "2000 Share = Rp 25.000",
@@ -554,11 +559,9 @@
       }
     ],
     "notes": [
-      "Garansi ON",
-      "Selama proses harap tidak di Private",
-      "Jangan ubah username saat pesanan diproses",
-      "Proses cepat (maks 1x24 jam)",
-      "Cukup kirim username/link"
+      "Garansi Drop 50% (belum bisa full garansi karena keamanan tiktok ditingkatkan)",
+      "Order Hari ini, di Proses hari ini (tergantung antrian)",
+      "Tinggal kirim link/username Tiktok (tanpa password)"
     ]
   },
   "instagram": {
