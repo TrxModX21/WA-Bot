@@ -148,7 +148,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       plans = p.plans
         .map((plan) => {
           if (plan.details && Array.isArray(plan.details)) {
-            // format untuk TikTok
+            // format untuk TikTok dan netflix dan Netflix
             if (plan.is_ready === false) {
               return `*${plan.type}*\n(kosong) ❌`;
             }
@@ -232,7 +232,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
         plans = p.plans
           .map((plan) => {
             if (plan.details && Array.isArray(plan.details)) {
-              // format untuk TikTok
+              // format untuk TikTok dan Netflix
               if (plan.is_ready === false) {
                 return `*${plan.type}*\n(kosong) ❌`;
               }

@@ -128,19 +128,22 @@
     "description": "Region ID • 1 Profil = 1 Pengguna (tanpa VPN) • Anti Hold | Garansi Aktif | Support HD - 4K",
     "plans": [
       {
-        "duration": "1 Bulan",
-        "price": "Rp 34.000"
+        "type": "1P2U = 1Profile 2User",
+        "is_ready": true,
+        "details": ["1 Bulan = Rp 34.000", "3 Bulan = Rp 92.000"]
       },
       {
-        "duration": "3 Bulan",
-        "price": "Rp 92.000"
+        "type": "1P1U = 1Profile 1User",
+        "is_ready": true,
+        "details": ["1 Bulan = Rp 40.000", "3 Bulan = Rp 102.000"]
       }
     ],
     "notes": [
       "Garansi ON",
       "Tidak boleh mengganti email/password atau menambah nomor HP",
       "Tidak boleh mengubah membership/langganan",
-      "Melanggar = Garansi otomatis hangus"
+      "Melanggar = Garansi otomatis hangus",
+      "Mau jarang screen limit ambil yg 1P1U"
     ]
   },
   "alightmotion": {
