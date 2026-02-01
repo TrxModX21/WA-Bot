@@ -317,12 +317,7 @@
       {
         "duration": "2 Bulan",
         "price": "Rp 35.000"
-      },
-      {
-        "isPromo": true,
-        "duration": "1 Tahun",
-        "price": "Rp 80.000"
-      }
+      }      
     ],
     "notes": [
       "Garansi ON",
@@ -338,17 +333,12 @@
     "plans": [
       {
         "duration": "1 Bulan",
-        "price": "Rp 18.000"
+        "price": "Rp 20.000"
       },
       {
         "duration": "2 Bulan",
         "price": "Rp 30.000"
-      },
-      {
-        "isPromo": true,
-        "duration": "1 Tahun",
-        "price": "Rp 80.000"
-      }
+      }      
     ],
     "notes": [
       "Garansi ON",
@@ -369,12 +359,7 @@
       {
         "duration": "2 Bulan",
         "price": "Rp 35.000"
-      },
-      {
-        "isPromo": true,
-        "duration": "1 Tahun",
-        "price": "Rp 80.000"
-      }
+      }      
     ],
     "notes": [
       "Garansi ON",
