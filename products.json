@@ -672,8 +672,12 @@
         "price": "Rp 19.000"
       },
       {
-        "duration": "3 Bulan",
+        "duration": "2 Bulan",
         "price": "Rp 37.000"
+      },
+      {
+        "duration": "3 Bulan",
+        "price": "Rp 48.000"
       }
     ],
     "notes": [
