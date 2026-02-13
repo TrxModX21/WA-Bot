@@ -65,10 +65,15 @@
       {
         "duration": "1 Tahun",
         "price": "Rp 174.000"
+      },
+      {
+        "type": "Special Item",
+        "duration": "15 Bulan",
+        "price": "Rp 100.000 (No Garansi)"
       }
     ],
     "notes": [
-      "Garansi ON",
+      "Garansi ON kecuali 15 Bulan",
       "Langsung aktif setelah pembayaran",
       "Tanpa ribet dan tanpa watermark!"
     ]
