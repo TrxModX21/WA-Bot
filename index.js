@@ -158,7 +158,11 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
               .join("\n")}`;
           } else if (plan.duration && plan.price && !plan.isPromo) {
             // format umum
-            return `- ${plan.duration} : *${plan.price}*`;
+            if (plan.type && plan.duration && plan.price) {
+              return `- ${plan.type} : *${plan.price}*`;
+            } else {
+              return `- ${plan.duration} : *${plan.price}*`;
+            }
           } else if (plan.type && plan.price) {
             // format seperti CorelDraw / Vidio
             return `- ${plan.type} : *${plan.price}*`;
@@ -242,7 +246,11 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
                 .join("\n")}`;
             } else if (plan.duration && plan.price && !plan.isPromo) {
               // format umum
-              return `- ${plan.duration} : *${plan.price}*`;
+              if (plan.type && plan.duration && plan.price) {
+                return `- ${plan.type} : *${plan.price}*`;
+              } else {
+                return `- ${plan.duration} : *${plan.price}*`;
+              }
             } else if (plan.type && plan.price) {
               // format seperti CorelDraw / Vidio
               return `- ${plan.type} : *${plan.price}*`;
