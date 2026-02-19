@@ -159,7 +159,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
           } else if (plan.duration && plan.price && !plan.isPromo) {
             // format umum
             if (plan.type && plan.duration && plan.price) {
-              return `\n${plan.type}\n   - *${plan.price}*`;
+              return `\n${plan.type}\n   - ${plan.duration} : *${plan.price}*`;
             } else {
               return `- ${plan.duration} : *${plan.price}*`;
             }
@@ -247,7 +247,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
             } else if (plan.duration && plan.price && !plan.isPromo) {
               // format umum
               if (plan.type && plan.duration && plan.price) {
-                return `\n${plan.type}\n   - *${plan.price}*`;
+                return `\n${plan.type}\n   - ${plan.duration} : *${plan.price}*`;
               } else {
                 return `- ${plan.duration} : *${plan.price}*`;
               }
