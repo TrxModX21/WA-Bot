@@ -3,6 +3,7 @@ import makeWASocket, {
   useMultiFileAuthState,
   DisconnectReason,
   makeCacheableSignalKeyStore,
+  fetchLatestBaileysVersion,
 } from "baileys";
 import qrcode from "qrcode-terminal";
 
@@ -28,14 +29,17 @@ const aliases = {
 
 async function startBot() {
   const { state, saveCreds } = await useMultiFileAuthState("session");
+  const { version, isLatest } = await fetchLatestBaileysVersion();
+  console.log(`Menggunakan WA v${version.join(".")}, isLatest: ${isLatest}`);
 
   const sock = makeWASocket({
+    version,
     printQRInTerminal: false,
     auth: {
       creds: state.creds,
       keys: makeCacheableSignalKeyStore(state.keys, null),
     },
-    browser: ["Bot WhatsApp", "Chrome", "1.0.0"],
+    browser: ["Ubuntu", "Chrome", "20.0.04"],
   });
 
   sock.ev.on("creds.update", saveCreds);
