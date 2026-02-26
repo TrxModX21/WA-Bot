@@ -59,7 +59,7 @@ async function startBot() {
 
       console.log(
         "❌ Koneksi terputus. Reconnect:",
-        shouldReconnect ? "Ya" : "Tidak"
+        shouldReconnect ? "Ya" : "Tidak",
       );
 
       if (shouldReconnect) startBot();
@@ -82,7 +82,7 @@ async function startBot() {
     if (!text.trim()) return;
 
     console.log(
-      `📩 Pesan dari ${isGroup ? "grup" : "personal"} ${from}: ${text}`
+      `📩 Pesan dari ${isGroup ? "grup" : "personal"} ${from}: ${text}`,
     );
 
     if (isGroup) {
@@ -179,6 +179,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
         .join("\n");
     }
     const notes = p.notes.map((n) => `• ${n}`).join("\n");
+    const notesAddition = p.notesAddition ? `\n\n*${p.notesAddition}` : "";
 
     const featuresTitle = p.features_title ? `\n\n${p.features_title}` : "";
     let features = "";
@@ -193,7 +194,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
 
     await delay();
     await sock.sendMessage(from, {
-      text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`,
+      text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}${notesAddition}`,
       quoted: {
         key: msg.key,
         message: msg.message,
@@ -267,6 +268,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
           .join("\n");
       }
       const notes = p.notes.map((n) => `• ${n}`).join("\n");
+      const notesAddition = p.notesAddition ? `\n\n*${p.notesAddition}` : "";
 
       const featuresTitle = p.features_title ? `\n\n${p.features_title}` : "";
       let features = "";
@@ -292,7 +294,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
 
       await delay();
       await sock.sendMessage(from, {
-        text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`,
+        text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}${notesAddition}`,
         quoted: {
           key: msg.key,
           message: msg.message,
