@@ -179,7 +179,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
         .join("\n");
     }
     const notes = p.notes.map((n) => `• ${n}`).join("\n");
-    const notesAddition = p.notesAddition ? `\n\n*${p.notesAddition}` : "";
+    const notesAddition = p.notesAddition ? `\n*${p.notesAddition}` : "";
 
     const featuresTitle = p.features_title ? `\n\n${p.features_title}` : "";
     let features = "";
@@ -268,7 +268,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
           .join("\n");
       }
       const notes = p.notes.map((n) => `• ${n}`).join("\n");
-      const notesAddition = p.notesAddition ? `\n\n*${p.notesAddition}` : "";
+      const notesAddition = p.notesAddition ? `\n*${p.notesAddition}` : "";
 
       const featuresTitle = p.features_title ? `\n\n${p.features_title}` : "";
       let features = "";
