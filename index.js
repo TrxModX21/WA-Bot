@@ -273,7 +273,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       const notes = p.notes.map((n) => `• ${n}`).join("\n");
       const notesAddition = p.notesAddition ? `\n*${p.notesAddition}` : "";
       const extendNotes = p.extended_notes
-        ? "\n\nNote:" + p.extended_notes.map((en) => `*${en}`).join("\n")
+        ? "\n\nNote:\n" + p.extended_notes.map((en) => `*${en}`).join("\n")
         : "";
 
       const featuresTitle = p.features_title ? `\n\n${p.features_title}` : "";
