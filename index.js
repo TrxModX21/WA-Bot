@@ -180,7 +180,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
     }
     const notes = p.notes.map((n) => `• ${n}`).join("\n");
     const notesAddition = p.notesAddition ? `\n*${p.notesAddition}` : "";
-    const extendNotes = p.extendNotes
+    const extendNotes = p.extended_notes
       ? "\n\n" + p.extended_notes.map((en) => `*${en}`).join("\n")
       : "";
 
@@ -272,7 +272,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       }
       const notes = p.notes.map((n) => `• ${n}`).join("\n");
       const notesAddition = p.notesAddition ? `\n*${p.notesAddition}` : "";
-      const extendNotes = p.extendNotes
+      const extendNotes = p.extended_notes
         ? "\n\n" + p.extended_notes.map((en) => `*${en}`).join("\n")
         : "";
 
