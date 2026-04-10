@@ -59,7 +59,7 @@ async function startBot() {
 
       console.log(
         "❌ Koneksi terputus. Reconnect:",
-        shouldReconnect ? "Ya" : "Tidak",
+        shouldReconnect ? "Ya" : "Tidak"
       );
 
       if (shouldReconnect) startBot();
@@ -82,7 +82,7 @@ async function startBot() {
     if (!text.trim()) return;
 
     console.log(
-      `📩 Pesan dari ${isGroup ? "grup" : "personal"} ${from}: ${text}`,
+      `📩 Pesan dari ${isGroup ? "grup" : "personal"} ${from}: ${text}`
     );
 
     if (isGroup) {
@@ -180,6 +180,9 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
     }
     const notes = p.notes.map((n) => `• ${n}`).join("\n");
     const notesAddition = p.notesAddition ? `\n*${p.notesAddition}` : "";
+    const extendNotes = p.extendNotes
+      ? "\n\n" + p.extended_notes.map((en) => `*${en}`).join("\n")
+      : "";
 
     const featuresTitle = p.features_title ? `\n\n${p.features_title}` : "";
     let features = "";
@@ -194,7 +197,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
 
     await delay();
     await sock.sendMessage(from, {
-      text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}${notesAddition}`,
+      text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}${notesAddition}${extendNotes}`,
       quoted: {
         key: msg.key,
         message: msg.message,
@@ -269,6 +272,9 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       }
       const notes = p.notes.map((n) => `• ${n}`).join("\n");
       const notesAddition = p.notesAddition ? `\n*${p.notesAddition}` : "";
+      const extendNotes = p.extendNotes
+        ? "\n\n" + p.extended_notes.map((en) => `*${en}`).join("\n")
+        : "";
 
       const featuresTitle = p.features_title ? `\n\n${p.features_title}` : "";
       let features = "";
@@ -294,7 +300,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
 
       await delay();
       await sock.sendMessage(from, {
-        text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}${notesAddition}`,
+        text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}${notesAddition}${extendNotes}`,
         quoted: {
           key: msg.key,
           message: msg.message,
