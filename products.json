@@ -6,19 +6,19 @@
     "plans": [
       {
         "duration": "1 Bulan",
-        "price": "Rp 14.000"
+        "price": "Rp 18.000"
       },
       {
         "duration": "2 Bulan",
-        "price": "Rp 24.000"
+        "price": "Rp 28.000"
       },
       {
         "duration": "3 Bulan",
-        "price": "Rp 35.000"
+        "price": "Rp 39.000"
       },
       {
         "duration": "1 Tahun",
-        "price": "Rp 135.000"
+        "price": "Rp 150.000"
       }
     ],
     "notes": [
