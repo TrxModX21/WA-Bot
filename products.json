@@ -146,12 +146,18 @@
       {
         "type": "1P2U = 1Profile 2User",
         "is_ready": true,
-        "details": ["1 Bulan = Rp 34.000", "3 Bulan = Rp 92.000"]
+        "details": [
+          "1 Bulan = Rp 34.000",
+          "3 Bulan = Rp 92.000"
+        ]
       },
       {
         "type": "1P1U = 1Profile 1User",
         "is_ready": true,
-        "details": ["1 Bulan = Rp 40.000", "3 Bulan = Rp 115.000"]
+        "details": [
+          "1 Bulan = Rp 40.000",
+          "3 Bulan = Rp 115.000"
+        ]
       },
       {
         "type": "SemiPrivate(Bisa Request Profil dan PIN)",
@@ -405,14 +411,15 @@
     "plans": [
       {
         "duration": "1 Bulan",
-        "price": "Rp 55.000"
+        "price": "Rp 30.000"
       }
     ],
     "notes": [
       "Garansi ON",
       "Akun dari seller",
       "Dilarang mengganti password",
-      "Unlimited Generate TEKS to IMAGE"
+      "Unlimited Generate TEKS to IMAGE",
+      "Kredit Ai 8500"
     ]
   },
   "coreldraw": {
@@ -467,7 +474,10 @@
         "price": "Rp 35.000"
       }
     ],
-    "notes": ["Garansi ON", "Bisa akun pribadi"]
+    "notes": [
+      "Garansi ON",
+      "Bisa akun pribadi"
+    ]
   },
   "remini": {
     "title": "Remini Premium",
@@ -625,7 +635,10 @@
         "price": "Rp 40.000"
       }
     ],
-    "notes": ["Garansi ON", "Akun Resmi dari VN bukan MOD"]
+    "notes": [
+      "Garansi ON",
+      "Akun Resmi dari VN bukan MOD"
+    ]
   },
   "iflix": {
     "title": "iFlix",
@@ -731,7 +744,11 @@
         "price": "Rp 50.000"
       }
     ],
-    "notes": ["Garansi ON", "akun dari seller", "dilarang mengganti pw"],
+    "notes": [
+      "Garansi ON",
+      "akun dari seller",
+      "dilarang mengganti pw"
+    ],
     "features_title": "FITUR zoom",
     "features": [
       "100 participant",
