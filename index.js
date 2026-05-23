@@ -210,9 +210,15 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       description = `${p.description}\n\n`;
     }
 
+    let forChatGpt = "";
+    if (lower === "chatgpt") {
+      forChatGpt =
+        "\nCek perbedaannya Go, Plus, Business, dan Pro disini : https://chatgpt.com/id-ID/pricing/";
+    }
+
     await delay();
     await sock.sendMessage(from, {
-      text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}${notesAddition}${extendNotes}`,
+      text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}${notesAddition}${extendNotes}${forChatGpt}`,
       quoted: {
         key: msg.key,
         message: msg.message,
@@ -317,6 +323,12 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
         description = `${p.description}\n\n`;
       }
 
+      let forChatGpt = "";
+      if (lower === "chatgpt") {
+        forChatGpt =
+          "\nCek perbedaannya Go, Plus, Business, dan Pro disini : https://chatgpt.com/id-ID/pricing/";
+      }
+
       //   const messageText = `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`;
       // await delay();
       // await sock.sendMessage(from, {
@@ -330,7 +342,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
 
       await delay();
       await sock.sendMessage(from, {
-        text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}${notesAddition}${extendNotes}`,
+        text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}${notesAddition}${extendNotes}${forChatGpt}`,
         quoted: {
           key: msg.key,
           message: msg.message,
