@@ -154,7 +154,9 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
 
       if (lower === "vidio") {
         plans = `Paket Sharing:\n${sharingPlans}\n\nPaket Private:\n${privatePlans}\n\n*Tonton tanpa iklan, kualitas HD, dan legal resmi dari Vidio!`;
-      } else if (lower === "chatgpt" || lower === "spotify") {
+      } else if (lower === "chatgpt") {
+        plans = `Private Garansi Full\n${privateGaransi}\n\nPrivate Non Garansi\n${privateNonGaransi}`;
+      } else if (lower === "spotify") {
         plans = `Private Garansi Full\n${privateGaransi}\n\nPrivate Non Garansi\n${privateNonGaransi}`;
       } else {
         plans = `Sharing\n${sharingPlans}\n\nPrivate\n${privatePlans}`;
@@ -249,15 +251,19 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
 
         const privateGaransi = p.plans
           .filter((plan) => plan.type === "private-full")
-          .map((plan) => `- ${plan.duration} : *${plan.price}*`);
+          .map((plan) => `- ${plan.duration} : *${plan.price}*`)
+          .join("\n");
 
         const privateNonGaransi = p.plans
           .filter((plan) => plan.type === "private-non-garansi")
-          .map((plan) => `- ${plan.duration} : *${plan.price}*`);
+          .map((plan) => `- ${plan.duration} : *${plan.price}*`)
+          .join("\n");
 
         if (lower === "vidio") {
           plans = `Paket Sharing:\n${sharingPlans}\n\nPaket Private:\n${privatePlans}\n\n*Tonton tanpa iklan, kualitas HD, dan legal resmi dari Vidio!`;
-        } else if (lower === "chatgpt" || lower === "spotify") {
+        } else if (lower === "chatgpt") {
+          plans = `Private Garansi Full\n${privateGaransi}\n\nPrivate Non Garansi\n${privateNonGaransi}`;
+        } else if (lower === "spotify") {
           plans = `Private Garansi Full\n${privateGaransi}\n\nPrivate Non Garansi\n${privateNonGaransi}`;
         } else {
           plans = `Sharing\n${sharingPlans}\n\nPrivate\n${privatePlans}`;
