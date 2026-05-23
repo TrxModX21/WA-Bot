@@ -36,23 +36,31 @@
     "description": "Akses musik tanpa batas dan tanpa iklan",
     "plans": [
       {
+        "type": "private-full",
+        "duration": "1 Bulan",
+        "price": "Rp 35.000"
+      },
+      {
+        "type": "private-full",
+        "duration": "2 Bulan",
+        "price": "Rp 60.000"
+      },
+      {
+        "type": "private-non-garansi",
         "duration": "1 Bulan",
         "price": "Rp 25.000"
       },
       {
+        "type": "private-non-garansi",
         "duration": "2 Bulan",
-        "price": "Rp 45.000"
-      },
-      {
-        "duration": "3 Bulan",
-        "price": "Rp 65.000"
+        "price": "Rp 40.000"
       }
     ],
     "notes": [
-      "Garansi ON",
+      "kalau order no garansi dilarang komplain jika akun nonaktif",
       "Tanpa iklan",
-      "Akun baru(private, bukan sharing)",
-      "Legal & asli dari Spotify(bukan mod)"
+      "Legal & asli dari Spotify(bukan mod)",
+      "Durasi Garansi 25 Hari / 1 bulan"
     ]
   },
   "capcut": {
@@ -297,48 +305,35 @@
     ]
   },
   "chatgpt": {
-    "title": "ChatGPT Plus Premium 5.2 - Penawaran Harga Termurah!",
+    "title": "ChatGPT Plus Premium 5.5",
     "is_ready": true,
-    "description": "Tersedia dua jenis akun: Sharing & Private dengan akses GPT Premium cepat dan stabil.",
+    "description": "Tersedia dua jenis Private dengan akses GPT Premium cepat dan stabil.",
     "plans": [
       {
-        "type": "sharing",
-        "duration": "1 Bulan (Sharing)",
-        "price": "Rp 18.000"
+        "type": "private-full",
+        "duration": "1 Bulan",
+        "price": "Rp 65.000"
       },
       {
-        "type": "sharing",
-        "duration": "3 Bulan (Sharing)",
-        "price": "Rp 44.000"
+        "type": "private-full",
+        "duration": "2 Bulan",
+        "price": "Rp 120.000"
       },
       {
-        "type": "private",
-        "duration": "1 Bulan (Private)",
-        "price": "Rp 55.000"
+        "type": "private-non-garansi",
+        "duration": "1 Bulan",
+        "price": "Rp 20.000"
       },
       {
-        "type": "private",
-        "duration": "3 Bulan (Private)",
-        "price": "Rp 150.000"
-      },
-      {
-        "type": "private",
-        "duration": "1 Tahun (Private)",
-        "price": "Rp 170.000"
+        "type": "private-non-garansi",
+        "duration": "2 Bulan",
+        "price": "Rp 35.000"
       }
     ],
-    "notes": [
-      "Garansi ON",
-      "Akun dari seller untuk versi Sharing",
-      "Akun Sharing Dilarang Ganti Password",
-      "Akun pribadi untuk versi Private",
-      "Untuk Jangka waktu 1 Tahun ChatGPT versi GO bukan Plus tapi tetap 5.2"
-    ],
     "extended_notes": [
-      "Akun Sharing history kecampur (no komplain kalau ada chat hilang atau history kecampur)",
-      "Akun Private bisa pakai Akun Pribadi (via invite workspace) chat/history tidak akan tercampur",
+      "Tidak Melayani Komplain jika order Non Garansi akun mati",
       "Selalu backup chat ataupun prompt untuk jaga-jaga karena ChatGPT baru marak Suspend",
-      "Garansi Full Jika ada Akun/Workspace Deactive"
+      "Cek perbedaannya Go, Plus, Business, dan Pro disini : https://chatgpt.com/id-ID/pricing/"
     ]
   },
   "gemini": {
@@ -446,11 +441,11 @@
   "disney": {
     "title": "Disney Plus",
     "is_ready": true,
-    "description": "Akun Sharing resmi dari Disney+",
+    "description": "Akun Private resmi dari Disney+",
     "plans": [
       {
         "duration": "1 Bulan",
-        "price": "Rp 37.000"
+        "price": "Rp 28.000"
       }
     ],
     "notes": [

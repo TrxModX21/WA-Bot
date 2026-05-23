@@ -59,7 +59,7 @@ async function startBot() {
 
       console.log(
         "❌ Koneksi terputus. Reconnect:",
-        shouldReconnect ? "Ya" : "Tidak"
+        shouldReconnect ? "Ya" : "Tidak",
       );
 
       if (shouldReconnect) startBot();
@@ -82,7 +82,7 @@ async function startBot() {
     if (!text.trim()) return;
 
     console.log(
-      `📩 Pesan dari ${isGroup ? "grup" : "personal"} ${from}: ${text}`
+      `📩 Pesan dari ${isGroup ? "grup" : "personal"} ${from}: ${text}`,
     );
 
     if (isGroup) {
@@ -131,7 +131,8 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       lower === "chatgpt" ||
       lower === "we tv" ||
       lower === "wetv" ||
-      lower === "vidio"
+      lower === "vidio" ||
+      lower === "spotify"
     ) {
       const sharingPlans = p.plans
         .filter((plan) => plan.type === "sharing")
@@ -143,8 +144,18 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
         .map((plan) => `- ${plan.duration} : *${plan.price}*`)
         .join("\n");
 
+      const privateGaransi = p.plans
+        .filter((plan) => plan.type === "private-full")
+        .map((plan) => `- ${plan.duration} : *${plan.price}*`);
+
+      const privateNonGaransi = p.plans
+        .filter((plan) => plan.type === "private-non-garansi")
+        .map((plan) => `- ${plan.duration} : *${plan.price}*`);
+
       if (lower === "vidio") {
         plans = `Paket Sharing:\n${sharingPlans}\n\nPaket Private:\n${privatePlans}\n\n*Tonton tanpa iklan, kualitas HD, dan legal resmi dari Vidio!`;
+      } else if (lower === "chatgpt" || lower === "spotify") {
+        plans = `Private Garansi Full\n${privateGaransi}\n\nPrivate Non Garansi\n${privateNonGaransi}`;
       } else {
         plans = `Sharing\n${sharingPlans}\n\nPrivate\n${privatePlans}`;
       }
@@ -223,7 +234,8 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
         lower === "chatgpt" ||
         lower === "we tv" ||
         lower === "wetv" ||
-        lower === "vidio"
+        lower === "vidio" ||
+        lower === "spotify"
       ) {
         const sharingPlans = p.plans
           .filter((plan) => plan.type === "sharing")
@@ -235,8 +247,18 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
           .map((plan) => `- ${plan.duration} : *${plan.price}*`)
           .join("\n");
 
+        const privateGaransi = p.plans
+          .filter((plan) => plan.type === "private-full")
+          .map((plan) => `- ${plan.duration} : *${plan.price}*`);
+
+        const privateNonGaransi = p.plans
+          .filter((plan) => plan.type === "private-non-garansi")
+          .map((plan) => `- ${plan.duration} : *${plan.price}*`);
+
         if (lower === "vidio") {
           plans = `Paket Sharing:\n${sharingPlans}\n\nPaket Private:\n${privatePlans}\n\n*Tonton tanpa iklan, kualitas HD, dan legal resmi dari Vidio!`;
+        } else if (lower === "chatgpt" || lower === "spotify") {
+          plans = `Private Garansi Full\n${privateGaransi}\n\nPrivate Non Garansi\n${privateNonGaransi}`;
         } else {
           plans = `Sharing\n${sharingPlans}\n\nPrivate\n${privatePlans}`;
         }
