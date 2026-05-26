@@ -69,10 +69,27 @@
     "description": "Untuk iOS, Android, dan PC (Mac & Windows). Versi berkualitas, 100% siap pakai!",
     "plans": [
       {
+        "type": "sharing",
+        "duration": "1 Bulan",
+        "price": "Rp 28.000"
+      },
+      {
+        "type": "sharing",
+        "duration": "2 Bulan",
+        "price": "Rp 50.000"
+      },
+      {
+        "type": "private",
+        "duration": "1 Minggu",
+        "price": "Rp 15.000"
+      },
+      {
+        "type": "private",
         "duration": "1 Bulan",
         "price": "Rp 44.000"
       },
       {
+        "type": "private",
         "duration": "2 Bulan",
         "price": "Rp 80.000"
       }
@@ -451,7 +468,7 @@
         "price": "Rp 20.000"
       },
       {
-        "duration": "2–3 Bulan",
+        "duration": "2-3 Bulan",
         "price": "Rp 35.000"
       }
     ],

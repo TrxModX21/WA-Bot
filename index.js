@@ -132,7 +132,8 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       lower === "we tv" ||
       lower === "wetv" ||
       lower === "vidio" ||
-      lower === "spotify"
+      lower === "spotify" ||
+      lower === "capcut"
     ) {
       const sharingPlans = p.plans
         .filter((plan) => plan.type === "sharing")
@@ -245,7 +246,8 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
         lower === "we tv" ||
         lower === "wetv" ||
         lower === "vidio" ||
-        lower === "spotify"
+        lower === "spotify" ||
+        lower === "capcut"
       ) {
         const sharingPlans = p.plans
           .filter((plan) => plan.type === "sharing")
