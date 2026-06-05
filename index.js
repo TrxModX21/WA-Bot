@@ -106,12 +106,42 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
 
     await delay();
     await sock.sendMessage(from, {
-      text: `📋 *Menu Produk Tersedia:*\n\n${list}\n\n*ketik nama produk\n(contoh: *youtube*) untuk lihat detailnya.\n\n*Untuk pemesanan bisa langsung hubungi admin 082312300176\n(Admin Software Murah)`,
+      text: `📋 *Menu Produk Tersedia:*\n\n${list}\n\n*ketik nama produk\n(contoh: *youtube*) untuk lihat detailnya.\n\n*Untuk informasi pembayaran bisa ketik payment\n\n*Untuk pemesanan bisa langsung hubungi admin 082312300176\n(Admin Software Murah)`,
       quoted: {
         key: msg.key,
         message: msg.message,
       },
     });
+  } else if (["pay", "payment", "bayar", "pembayaran"].includes(lower)) {
+    const paymentText = `💳 *Payment disini ya kak*\n\n` +
+      `BCA       : *8465868071*\n` +
+      `DANA    : *088232144813*\n` +
+      `OVO      : *088232144813*\n` +
+      `SPay      : *088232144813*\n\n` +
+      `A/N *Danu Tri Wicaksono*`;
+
+    await delay();
+
+    // Kirim gambar QRIS jika file tersedia
+    const qrisPath = "./banners/qris.jpeg";
+    if (fs.existsSync(qrisPath)) {
+      await sock.sendMessage(from, {
+        image: fs.readFileSync(qrisPath),
+        caption: paymentText,
+        quoted: {
+          key: msg.key,
+          message: msg.message,
+        },
+      });
+    } else {
+      await sock.sendMessage(from, {
+        text: paymentText,
+        quoted: {
+          key: msg.key,
+          message: msg.message,
+        },
+      });
+    }
   } else if (products[lower]) {
     const p = products[lower];
     let plans = "";
