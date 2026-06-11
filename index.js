@@ -113,12 +113,16 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       },
     });
   } else if (["pay", "payment", "bayar", "pembayaran"].includes(lower)) {
-    const paymentText = `💳 *Payment disini ya kak*\n\n` +
-      `BCA       : *8465868071*\n` +
-      `DANA    : *088232144813*\n` +
-      `OVO      : *088232144813*\n` +
-      `SPay      : *088232144813*\n\n` +
-      `A/N *Danu Tri Wicaksono*`;
+    const paymentText = `💳 Payment disini ya kak\n\n` +
+      `BCA       : 8465868071\n` +
+      `DANA    : 088232144813\n` +
+      `OVO      : 088232144813\n` +
+      `SPay      : 088232144813\n` +
+      `A/N Danu Tri Wicaksono\n\n` +
+      `-------------------------------------------------------\n\n` +
+      `*Kirim Bukti Transfer bisa ke Grup ini, atau ke nomor\n` +
+      `Admin 1 : 088232144813\n` +
+      `Admin 2 : 082312300176`;
 
     await delay();
 
