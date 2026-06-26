@@ -7,7 +7,7 @@ import makeWASocket, {
 } from "baileys";
 import qrcode from "qrcode-terminal";
 
-const delay = (ms = 3000) => new Promise((res) => setTimeout(res, ms));
+const delay = (ms = 2000) => new Promise((res) => setTimeout(res, ms));
 
 // Load data produk dari file JSON
 const products = JSON.parse(fs.readFileSync("./products.json", "utf-8"));
