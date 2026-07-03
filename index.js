@@ -252,7 +252,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       forChatGpt =
         "\nCek perbedaannya Go, Plus, Business, dan Pro disini : https://chatgpt.com/id-ID/pricing/";
     }
-    const footer = p.footer ? `\n\n${p.footer}` : "";
+    const footer = p.footer ? `\n${p.footer}` : "";
 
     await delay();
     await sock.sendMessage(from, {
@@ -367,7 +367,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
         forChatGpt =
           "\nCek perbedaannya Go, Plus, Business, dan Pro disini : https://chatgpt.com/id-ID/pricing/";
       }
-      const footer = p.footer ? `\n\n${p.footer}` : "";
+      const footer = p.footer ? `\n${p.footer}` : "";
 
       //   const messageText = `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`;
       // await delay();
@@ -440,7 +440,7 @@ async function handlePrivateMessage(sock, from, text, msg) {
         .join("\n");
     }
     const notes = p.notes.map((n) => `• ${n}`).join("\n");
-    const footer = p.footer ? `\n\n${p.footer}` : "";
+    const footer = p.footer ? `\n${p.footer}` : "";
 
     await delay();
     await sock.sendMessage(from, {
