@@ -222,6 +222,8 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
             return `- ${plan.type} : *${plan.price}*`;
           } else if (plan.isPromo && plan.isPromo === true) {
             return `\nPROMO\n- ${plan.duration} : *${plan.price}*`;
+          } else if (plan.custom) {
+            return `- ${plan.custom}`;
           } else {
             return ""; // fallback
           }
@@ -250,10 +252,11 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       forChatGpt =
         "\nCek perbedaannya Go, Plus, Business, dan Pro disini : https://chatgpt.com/id-ID/pricing/";
     }
+    const footer = p.footer ? `\n\n${p.footer}` : "";
 
     await delay();
     await sock.sendMessage(from, {
-      text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}${notesAddition}${extendNotes}${forChatGpt}`,
+      text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}${notesAddition}${extendNotes}${forChatGpt}${footer}`,
       quoted: {
         key: msg.key,
         message: msg.message,
@@ -364,6 +367,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
         forChatGpt =
           "\nCek perbedaannya Go, Plus, Business, dan Pro disini : https://chatgpt.com/id-ID/pricing/";
       }
+      const footer = p.footer ? `\n\n${p.footer}` : "";
 
       //   const messageText = `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`;
       // await delay();
@@ -378,7 +382,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
 
       await delay();
       await sock.sendMessage(from, {
-        text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}${notesAddition}${extendNotes}${forChatGpt}`,
+        text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}${notesAddition}${extendNotes}${forChatGpt}${footer}`,
         quoted: {
           key: msg.key,
           message: msg.message,
@@ -427,6 +431,8 @@ async function handlePrivateMessage(sock, from, text, msg) {
             return `- ${plan.duration} : *${plan.price}*`;
           } else if (plan.type && plan.price) {
             return `- ${plan.type} : *${plan.price}*`;
+          } else if (plan.custom) {
+            return `- ${plan.custom}`;
           } else {
             return "";
           }
@@ -434,10 +440,11 @@ async function handlePrivateMessage(sock, from, text, msg) {
         .join("\n");
     }
     const notes = p.notes.map((n) => `• ${n}`).join("\n");
+    const footer = p.footer ? `\n\n${p.footer}` : "";
 
     await delay();
     await sock.sendMessage(from, {
-      text: `${p.title}\n\n${p.description}\n\n${plans}\n\n${notes}`,
+      text: `${p.title}\n\n${p.description}\n\n${plans}\n\nSyarat & Ketentuan:\n${notes}${footer}`,
       quoted: {
         key: msg.key,
         message: msg.message,

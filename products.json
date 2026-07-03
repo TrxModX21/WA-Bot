@@ -97,9 +97,9 @@
     "notes": [
       "Garansi ON (25 hari/1 bulan)",
       "Langsung aktif setelah pembayaran",
-      "Tanpa ribet dan tanpa watermark!",
-      "Maks Login 2 Device (1 HP + 1 Laptop/PC)"
-    ]
+      "Tanpa ribet dan tanpa watermark!"
+    ],
+    "footer": "Sharing :\nMax 1 Device Only (iOS/Android)\n\nPrivate :\nMax 2 Device (HP+PC/Laptop)"
   },
   "canva": {
     "title": "Canva Pro Premium",
@@ -346,11 +346,14 @@
     "plans": [
       {
         "duration": "1 Bulan",
-        "price": "Rp 30.000"
+        "price": "Rp 25.000"
       },
       {
         "duration": "2 Bulan",
-        "price": "Rp 50.000"
+        "price": "Rp 38.000"
+      },
+      {
+        "custom": "Custom (diatas 2 bulan bisa japri admin)"
       }
     ],
     "notes": [
@@ -367,11 +370,14 @@
     "plans": [
       {
         "duration": "1 Bulan",
-        "price": "Rp 30.000"
+        "price": "Rp 25.000"
       },
       {
         "duration": "2 Bulan",
-        "price": "Rp 50.000"
+        "price": "Rp 38.000"
+      },
+      {
+        "custom": "Custom (diatas 2 bulan bisa japri admin)"
       }
     ],
     "notes": [
@@ -388,11 +394,14 @@
     "plans": [
       {
         "duration": "1 Bulan",
-        "price": "Rp 30.000"
+        "price": "Rp 25.000"
       },
       {
         "duration": "2 Bulan",
-        "price": "Rp 50.000"
+        "price": "Rp 38.000"
+      },
+      {
+        "custom": "Custom (diatas 2 bulan bisa japri admin)"
       }
     ],
     "notes": [
