@@ -740,15 +740,29 @@
   "zoom": {
     "title": "Zoom Meetings Pro",
     "is_ready": true,
-    "description": "(Semi Private)",
+    "description": "",
     "plans": [
       {
-        "duration": "1 Bulan",
-        "price": "Rp 20.000"
+        "type": "Peserta 100+",
+        "is_ready": true,
+        "details": [
+          "1 Bulan : Rp 20.000",
+          "3 Bulan : Rp 50.000"
+        ]
       },
       {
-        "duration": "3 Bulan",
-        "price": "Rp 50.000"
+        "type": "Peserta 300+",
+        "is_ready": true,
+        "details": [
+          "1 Hari : Rp 34.000"
+        ]
+      },
+      {
+        "type": "Peserta 500+",
+        "is_ready": true,
+        "details": [
+          "1 Hari : Rp 85.000"
+        ]
       }
     ],
     "notes": [
@@ -758,7 +772,6 @@
     ],
     "features_title": "FITUR zoom",
     "features": [
-      "100 participant",
       "Unlimited Time",
       "Breakout room",
       "Host & Co-Host",
