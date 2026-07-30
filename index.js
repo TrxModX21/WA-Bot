@@ -91,6 +91,45 @@ async function startBot() {
       await handlePrivateMessage(sock, from, text, msg);
     }
   });
+
+  sock.ev.on("group-participants.update", async (update) => {
+    const { id, participants, action } = update;
+
+    if (action === "add") {
+      try {
+        const mentions = participants;
+        const mentionsText = participants.map((jid) => `@${jid.split("@")[0]}`).join(", ");
+
+        const welcomeText = `Halo ${mentionsText} 👋\n\nSelamat datang di grup! Jangan lupa baca deskripsi grup dan patuhi aturan yang ada ya.\n\nKetik *!menu* untuk melihat daftar produk kami.`;
+
+        const bannerPath = "./banners/welcome.jpeg";
+        const bannerPathAlt = "./banners/welcome.jpg";
+        
+        await delay();
+        
+        if (fs.existsSync(bannerPath)) {
+          await sock.sendMessage(id, {
+            image: fs.readFileSync(bannerPath),
+            caption: welcomeText,
+            mentions: mentions,
+          });
+        } else if (fs.existsSync(bannerPathAlt)) {
+          await sock.sendMessage(id, {
+            image: fs.readFileSync(bannerPathAlt),
+            caption: welcomeText,
+            mentions: mentions,
+          });
+        } else {
+          await sock.sendMessage(id, {
+            text: welcomeText,
+            mentions: mentions,
+          });
+        }
+      } catch (error) {
+        console.error("Gagal mengirim pesan welcome:", error);
+      }
+    }
+  });
 }
 
 async function handleGroupMessage(sock, from, sender, text, msg) {

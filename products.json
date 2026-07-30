@@ -71,12 +71,12 @@
       {
         "type": "sharing",
         "duration": "1 Bulan",
-        "price": "Rp 38.000"
+        "price": "Rp 30.000"
       },
       {
         "type": "sharing",
         "duration": "2 Bulan",
-        "price": "Rp 70.000"
+        "price": "Rp 58.000"
       },
       {
         "type": "private",
@@ -243,19 +243,19 @@
     ]
   },
   "icloud": {
-    "title": "iCloud 2TB (2–3 Bulan)",
+    "title": "iCloud 2TB (2-3 Bulan)",
     "is_ready": true,
     "description": "Penyimpanan cloud premium Apple dengan kapasitas besar dan fitur tambahan eksklusif.",
     "plans": [
       {
-        "duration": "2–3 Bulan",
+        "duration": "2-3 Bulan",
         "price": "Rp 85.000"
       }
     ],
     "notes": [
       "Garansi ON",
       "Akun pribadi kamu sendiri",
-      "Proses 1–60 menit",
+      "Proses 1-60 menit",
       "Bonus fitur: Apple Music, TV, Arcade, Relay, Fitness"
     ]
   },
@@ -697,17 +697,13 @@
     "description": "(Akun Private)",
     "plans": [
       {
-        "duration": "1 Bulan",
-        "price": "Rp 13.000"
-      },
-      {
-        "duration": "3 Bulan",
-        "price": "Rp 23.000"
+        "duration": "LifeTime",
+        "price": "Rp 27.000"
       }
     ],
     "notes": [
-      "Garansi ON",
-      "Premium Biasa (Bukan Premium Plus+)",
+      "Garansi ON (10 Bulan)",
+      "Premium Anti Limit",
       "1 Akun 1 Orang (Akun Privat)",
       "Bukan Akun MOD/Ilegal (bukan curian)"
     ]
