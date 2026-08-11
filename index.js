@@ -1,4 +1,5 @@
 import fs from "fs";
+import os from "os";
 import makeWASocket, {
   useMultiFileAuthState,
   DisconnectReason,
@@ -8,6 +9,69 @@ import makeWASocket, {
 import qrcode from "qrcode-terminal";
 
 const delay = (ms = 500) => new Promise((res) => setTimeout(res, ms));
+
+function createProgressBar(percent, length = 10) {
+  const filled = Math.round((percent / 100) * length);
+  const empty = Math.max(0, length - filled);
+  return `[${"█".repeat(filled)}${"░".repeat(empty)}]`;
+}
+
+function formatUptime(seconds) {
+  const d = Math.floor(seconds / (3600 * 24));
+  const h = Math.floor((seconds % (3600 * 24)) / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
+  const s = Math.floor(seconds % 60);
+  return `${d}D ${h}H ${m}M ${s}S`;
+}
+
+async function sendPerformanceDashboard(sock, from, msg) {
+  const startTimer = Date.now();
+  const tempMessage = await sock.sendMessage(from, { text: "_Testing speed..._" }, { quoted: msg });
+  const responseTime = Date.now() - startTimer;
+
+  const totalMem = os.totalmem();
+  const freeMem = os.freemem();
+  const usedMem = totalMem - freeMem;
+  const ramPercent = (usedMem / totalMem) * 100;
+
+  const heapInfo = process.memoryUsage();
+  const heapPercent = (heapInfo.heapUsed / heapInfo.heapTotal) * 100;
+
+  const cpus = os.cpus();
+  let totalIdle = 0, totalTick = 0;
+  cpus.forEach(cpu => {
+    for (let type in cpu.times) {
+      totalTick += cpu.times[type];
+    }
+    totalIdle += cpu.times.idle;
+  });
+  const cpuPercent = 100 - ((totalIdle / totalTick) * 100);
+
+  const dashboard = `🎯 *PERFORMANCE DASHBOARD*
+
+📶 *RESPONSE TIME:* ${responseTime} ms
+⏳ *UPTIME:* ${formatUptime(process.uptime())}
+
+📊 *RESOURCE USAGE*
+🟢 RAM: ${createProgressBar(ramPercent)} ${ramPercent.toFixed(1)}%
+🟢 CPU: ${createProgressBar(cpuPercent)} ${cpuPercent.toFixed(1)}%
+🟢 HEAP: ${createProgressBar(heapPercent)} ${heapPercent.toFixed(1)}%
+
+💾 *MEMORY DETAILS*
+├ Used: ${(usedMem / 1024 / 1024 / 1024).toFixed(2)} GB / ${(totalMem / 1024 / 1024 / 1024).toFixed(2)} GB
+├ Free: ${(freeMem / 1024 / 1024 / 1024).toFixed(2)} GB
+└ Heap: ${(heapInfo.heapUsed / 1024 / 1024).toFixed(2)} MB
+
+👥 *CHAT STATISTICS*
+├ Groups: 0
+└ Personal: 0`;
+
+  await delay(1000);
+  await sock.sendMessage(from, {
+    text: dashboard,
+    edit: tempMessage.key,
+  });
+}
 
 // Load data produk dari file JSON
 const products = JSON.parse(fs.readFileSync("./products.json", "utf-8"));
@@ -135,7 +199,9 @@ async function startBot() {
 async function handleGroupMessage(sock, from, sender, text, msg) {
   const lower = text.toLowerCase();
 
-  if (lower === "!menu") {
+  if (lower === "ping" || lower === ".ping" || lower === "!ping") {
+    await sendPerformanceDashboard(sock, from, msg);
+  } else if (lower === "!menu") {
     // const list = Object.keys(products)
     //   .map((key) => `• *${products[key].title}* — ketik *${key}*`)
     //   .join("\n");
@@ -489,9 +555,8 @@ async function handlePrivateMessage(sock, from, text, msg) {
         message: msg.message,
       },
     });
-  } else if (lower === "ping") {
-    await delay();
-    await sock.sendMessage(from, { text: "Pong 🏓" });
+  } else if (lower === "ping" || lower === ".ping" || lower === "!ping") {
+    await sendPerformanceDashboard(sock, from, msg);
   }
 }
 
