@@ -93,8 +93,8 @@ const aliases = {
 
 async function startBot() {
   const { state, saveCreds } = await useMultiFileAuthState("session");
-  const { version, isLatest } = await fetchLatestBaileysVersion();
-  console.log(`Menggunakan WA v${version.join(".")}, isLatest: ${isLatest}`);
+  const version = [2, 3000, 1015901307];
+  console.log(`Menggunakan WA v${version.join(".")}`);
 
   const sock = makeWASocket({
     version,
