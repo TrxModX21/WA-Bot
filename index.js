@@ -26,7 +26,11 @@ function formatUptime(seconds) {
 
 async function sendPerformanceDashboard(sock, from, msg) {
   const startTimer = Date.now();
-  const tempMessage = await sock.sendMessage(from, { text: "_Testing speed..._" }, { quoted: msg });
+  const tempMessage = await sock.sendMessage(
+    from,
+    { text: "_Testing speed..._" },
+    { quoted: msg },
+  );
   const responseTime = Date.now() - startTimer;
 
   const totalMem = os.totalmem();
@@ -38,14 +42,15 @@ async function sendPerformanceDashboard(sock, from, msg) {
   const heapPercent = (heapInfo.heapUsed / heapInfo.heapTotal) * 100;
 
   const cpus = os.cpus();
-  let totalIdle = 0, totalTick = 0;
-  cpus.forEach(cpu => {
+  let totalIdle = 0,
+    totalTick = 0;
+  cpus.forEach((cpu) => {
     for (let type in cpu.times) {
       totalTick += cpu.times[type];
     }
     totalIdle += cpu.times.idle;
   });
-  const cpuPercent = 100 - ((totalIdle / totalTick) * 100);
+  const cpuPercent = 100 - (totalIdle / totalTick) * 100;
 
   const dashboard = `🎯 *PERFORMANCE DASHBOARD*
 
@@ -159,15 +164,17 @@ async function startBot() {
     if (action === "add") {
       try {
         const mentions = participants;
-        const mentionsText = participants.map((jid) => `@${jid.split("@")[0]}`).join(", ");
+        const mentionsText = participants
+          .map((jid) => `@${jid.split("@")[0]}`)
+          .join(", ");
 
         const welcomeText = `Halo ${mentionsText} 👋\n\nSelamat datang di grup! Jangan lupa baca deskripsi grup dan patuhi aturan yang ada ya.\n\nKetik *!menu* untuk melihat daftar produk kami.`;
 
         const bannerPath = "./banners/welcome.jpeg";
         const bannerPathAlt = "./banners/welcome.jpg";
-        
+
         await delay();
-        
+
         if (fs.existsSync(bannerPath)) {
           await sock.sendMessage(id, {
             image: fs.readFileSync(bannerPath),
@@ -215,7 +222,8 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       },
     });
   } else if (["pay", "payment", "bayar", "pembayaran"].includes(lower)) {
-    const paymentText = `💳 Payment disini ya kak\n\n` +
+    const paymentText =
+      `💳 Payment disini ya kak\n\n` +
       `BCA       : 8465868071\n` +
       `DANA    : 088232144813\n` +
       `OVO      : 088232144813\n` +
@@ -441,6 +449,8 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
               return `- ${plan.type} : *${plan.price}*`;
             } else if (plan.isPromo && plan.isPromo === true) {
               return `\nPROMO\n- ${plan.duration} : *${plan.price}*`;
+            } else if (plan.custom) {
+              return `- ${plan.custom}`;
             } else {
               return ""; // fallback
             }
