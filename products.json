@@ -353,7 +353,23 @@
         "price": "Rp 38.000"
       },
       {
-        "custom": "Custom (diatas 2 bulan bisa japri admin)"
+        "duration": "3 Bulan",
+        "price": "Rp 50.000"
+      },
+      {
+        "duration": "6 Bulan",
+        "price": "Rp 85.000"
+      },
+      {
+        "duration": "12 Bulan",
+        "price": "Rp 150.000"
+      },
+      {
+        "duration": "18 Bulan",
+        "price": "Rp 220.000"
+      },
+      {
+        "custom": "Custom (mau berapa bulan bisa japri admin)"
       }
     ],
     "notes": [
@@ -377,7 +393,23 @@
         "price": "Rp 38.000"
       },
       {
-        "custom": "Custom (diatas 2 bulan bisa japri admin)"
+        "duration": "3 Bulan",
+        "price": "Rp 50.000"
+      },
+      {
+        "duration": "6 Bulan",
+        "price": "Rp 85.000"
+      },
+      {
+        "duration": "12 Bulan",
+        "price": "Rp 150.000"
+      },
+      {
+        "duration": "18 Bulan",
+        "price": "Rp 220.000"
+      },
+      {
+        "custom": "Custom (mau berapa bulan bisa japri admin)"
       }
     ],
     "notes": [
@@ -401,7 +433,23 @@
         "price": "Rp 38.000"
       },
       {
-        "custom": "Custom (diatas 2 bulan bisa japri admin)"
+        "duration": "3 Bulan",
+        "price": "Rp 50.000"
+      },
+      {
+        "duration": "6 Bulan",
+        "price": "Rp 85.000"
+      },
+      {
+        "duration": "12 Bulan",
+        "price": "Rp 150.000"
+      },
+      {
+        "duration": "18 Bulan",
+        "price": "Rp 220.000"
+      },
+      {
+        "custom": "Custom (mau berapa bulan bisa japri admin)"
       }
     ],
     "notes": [
