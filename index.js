@@ -303,7 +303,14 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       if (lower === "vidio") {
         plans = `Paket Sharing:\n${sharingPlans}\n\nPaket Private:\n${privatePlans}\n\n*Tonton tanpa iklan, kualitas HD, dan legal resmi dari Vidio!`;
       } else if (lower === "chatgpt") {
-        plans = `Private Garansi Full\n${privateGaransi}\n\nPrivate Non Garansi\n${privateNonGaransi}`;
+        const grouped = {};
+        p.plans.forEach((plan) => {
+          if (!grouped[plan.type]) grouped[plan.type] = [];
+          grouped[plan.type].push(`- ${plan.duration} : *${plan.price}*`);
+        });
+        plans = Object.keys(grouped)
+          .map((type) => `${type}\n${grouped[type].join("\n")}`)
+          .join("\n\n");
       } else if (lower === "spotify") {
         plans = `Private Garansi Full\n${privateGaransi}\n\nPrivate Non Garansi\n${privateNonGaransi}`;
       } else {
@@ -341,7 +348,9 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
         })
         .join("\n");
     }
-    const notes = p.notes.map((n) => `• ${n}`).join("\n");
+    const notes = p.notes
+      .map((n) => (n.startsWith("*") || n.startsWith("•") ? n : `• ${n}`))
+      .join("\n");
     const notesAddition = p.notesAddition ? `\n*${p.notesAddition}` : "";
     const extendNotes = p.extended_notes
       ? "\nNote:\n" + p.extended_notes.map((en) => `*${en}`).join("\n")
@@ -359,10 +368,6 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
     }
 
     let forChatGpt = "";
-    if (lower === "chatgpt") {
-      forChatGpt =
-        "\nCek perbedaannya Go, Plus, Business, dan Pro disini : https://chatgpt.com/id-ID/pricing/";
-    }
     const footer = p.footer ? `\n${p.footer}` : "";
 
     await delay();
@@ -420,7 +425,14 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
         if (lower === "vidio") {
           plans = `Paket Sharing:\n${sharingPlans}\n\nPaket Private:\n${privatePlans}\n\n*Tonton tanpa iklan, kualitas HD, dan legal resmi dari Vidio!`;
         } else if (lower === "chatgpt") {
-          plans = `Private Garansi Full\n${privateGaransi}\n\nPrivate Non Garansi\n${privateNonGaransi}`;
+          const grouped = {};
+          p.plans.forEach((plan) => {
+            if (!grouped[plan.type]) grouped[plan.type] = [];
+            grouped[plan.type].push(`- ${plan.duration} : *${plan.price}*`);
+          });
+          plans = Object.keys(grouped)
+            .map((type) => `${type}\n${grouped[type].join("\n")}`)
+            .join("\n\n");
         } else if (lower === "spotify") {
           plans = `Private Garansi Full\n${privateGaransi}\n\nPrivate Non Garansi\n${privateNonGaransi}`;
         } else {
@@ -458,7 +470,9 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
           })
           .join("\n");
       }
-      const notes = p.notes.map((n) => `• ${n}`).join("\n");
+      const notes = p.notes
+        .map((n) => (n.startsWith("*") || n.startsWith("•") ? n : `• ${n}`))
+        .join("\n");
       const notesAddition = p.notesAddition ? `\n*${p.notesAddition}` : "";
       const extendNotes = p.extended_notes
         ? "\nNote:\n" + p.extended_notes.map((en) => `*${en}`).join("\n")
@@ -476,10 +490,6 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       }
 
       let forChatGpt = "";
-      if (lower === "chatgpt") {
-        forChatGpt =
-          "\nCek perbedaannya Go, Plus, Business, dan Pro disini : https://chatgpt.com/id-ID/pricing/";
-      }
       const footer = p.footer ? `\n${p.footer}` : "";
 
       //   const messageText = `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}`;
@@ -533,7 +543,16 @@ async function handlePrivateMessage(sock, from, text, msg) {
   } else if (products[lower]) {
     const p = products[lower];
     let plans = "";
-    if (p.plans && Array.isArray(p.plans)) {
+    if (lower === "chatgpt") {
+      const grouped = {};
+      p.plans.forEach((plan) => {
+        if (!grouped[plan.type]) grouped[plan.type] = [];
+        grouped[plan.type].push(`- ${plan.duration} : *${plan.price}*`);
+      });
+      plans = Object.keys(grouped)
+        .map((type) => `${type}\n${grouped[type].join("\n")}`)
+        .join("\n\n");
+    } else if (p.plans && Array.isArray(p.plans)) {
       plans = p.plans
         .map((plan) => {
           if (plan.details && Array.isArray(plan.details)) {
@@ -552,7 +571,9 @@ async function handlePrivateMessage(sock, from, text, msg) {
         })
         .join("\n");
     }
-    const notes = p.notes.map((n) => `• ${n}`).join("\n");
+    const notes = p.notes
+      .map((n) => (n.startsWith("*") || n.startsWith("•") ? n : `• ${n}`))
+      .join("\n");
     const footer = p.footer ? `\n${p.footer}` : "";
 
     await delay();

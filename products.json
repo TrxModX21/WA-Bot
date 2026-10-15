@@ -69,37 +69,27 @@
     "description": "Untuk iOS, Android, dan PC (Mac & Windows). Versi berkualitas, 100% siap pakai!",
     "plans": [
       {
-        "type": "sharing",
-        "duration": "1 Bulan",
-        "price": "Rp 30.000"
-      },
-      {
-        "type": "sharing",
-        "duration": "2 Bulan",
-        "price": "Rp 58.000"
-      },
-      {
         "type": "private",
         "duration": "1 Minggu",
-        "price": "Rp 20.000"
+        "price": "Rp 15.000"
       },
       {
         "type": "private",
         "duration": "1 Bulan",
-        "price": "Rp 44.000"
+        "price": "Rp 35.000"
       },
       {
         "type": "private",
         "duration": "2 Bulan",
-        "price": "Rp 80.000"
+        "price": "Rp 65.000"
       }
     ],
     "notes": [
-      "Garansi ON (25 hari/1 bulan)",
-      "Langsung aktif setelah pembayaran",
+      "Garansi ON",
+      "Durasi 25-30 Hari dihitung 1 Bulan",
       "Tanpa ribet dan tanpa watermark!"
     ],
-    "footer": "Sharing :\nMax 1 Device (Only Android)\n\nPrivate :\nMax 2 Device (HP+PC/Laptop)\n*User iPhone/iOS wajib beli Private*"
+    "footer": "Max 2 Device (HP+PC/Laptop)"
   },
   "canva": {
     "title": "Canva Pro Premium",
@@ -309,35 +299,33 @@
     ]
   },
   "chatgpt": {
-    "title": "ChatGPT Plus Premium 5.5 (WAJIB TANYA STOK DULU)",
+    "title": "ChatGPT Premium 6.0 (WAJIB TANYA STOK DULU)",
     "is_ready": true,
-    "description": "Tersedia dua jenis Private dengan akses GPT Premium cepat dan stabil.",
+    "description": "",
     "plans": [
       {
-        "type": "private-full",
+        "type": "Private (Akun Seller)",
         "duration": "1 Bulan",
-        "price": "Rp 65.000"
+        "price": "Rp 70.000"
       },
       {
-        "type": "private-full",
-        "duration": "2 Bulan",
-        "price": "Rp 120.000"
+        "type": "Private (Email Sendiri, SNK Berlaku)",
+        "duration": "3 Bulan",
+        "price": "Rp 155.000"
       },
       {
-        "type": "private-non-garansi",
+        "type": "Sharing",
         "duration": "1 Bulan",
-        "price": "Rp 20.000"
-      },
-      {
-        "type": "private-non-garansi",
-        "duration": "2 Bulan",
-        "price": "Rp 35.000"
+        "price": "Rp 25.000"
       }
     ],
     "notes": [
-      "Tidak Melayani Komplain jika order Non Garansi akun mati",
-      "Selalu backup chat ataupun prompt untuk jaga-jaga karena ChatGPT baru marak Suspend"
-    ]
+      "* Produk yg tersedia adalah ChatGPT Go",
+      "* Full Garansi BackFree",
+      "* Garansi deactive 1× → replace account",
+      "* Disarankan backup chat dan prompt secara berkala untuk mengantisipasi suspend akun."
+    ],
+    "footer": "Cek perbedaan ChatGPT Go, Plus, Business, dan Pro:\nhttps://chatgpt.com/id-ID/pricing/"
   },
   "gemini": {
     "title": "Gemini Ai Pro (BONUS VEO 3 + GDrive 2TB + NotebookLM)",
