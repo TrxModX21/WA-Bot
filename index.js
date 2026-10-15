@@ -314,7 +314,10 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       } else if (lower === "spotify") {
         plans = `Private Garansi Full\n${privateGaransi}\n\nPrivate Non Garansi\n${privateNonGaransi}`;
       } else {
-        plans = `Sharing\n${sharingPlans}\n\nPrivate\n${privatePlans}`;
+        const sections = [];
+        if (sharingPlans) sections.push(`Sharing\n${sharingPlans}`);
+        if (privatePlans) sections.push(`Private\n${privatePlans}`);
+        plans = sections.join("\n\n");
       }
     } else if (p.plans && Array.isArray(p.plans)) {
       plans = p.plans
@@ -436,7 +439,10 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
         } else if (lower === "spotify") {
           plans = `Private Garansi Full\n${privateGaransi}\n\nPrivate Non Garansi\n${privateNonGaransi}`;
         } else {
-          plans = `Sharing\n${sharingPlans}\n\nPrivate\n${privatePlans}`;
+          const sections = [];
+          if (sharingPlans) sections.push(`Sharing\n${sharingPlans}`);
+          if (privatePlans) sections.push(`Private\n${privatePlans}`);
+          plans = sections.join("\n\n");
         }
       } else if (p.plans && Array.isArray(p.plans)) {
         plans = p.plans
@@ -552,6 +558,43 @@ async function handlePrivateMessage(sock, from, text, msg) {
       plans = Object.keys(grouped)
         .map((type) => `${type}\n${grouped[type].join("\n")}`)
         .join("\n\n");
+    } else if (
+      lower === "we tv" ||
+      lower === "wetv" ||
+      lower === "vidio" ||
+      lower === "spotify" ||
+      lower === "capcut"
+    ) {
+      const sharingPlans = p.plans
+        .filter((plan) => plan.type === "sharing")
+        .map((plan) => `- ${plan.duration} : *${plan.price}*`)
+        .join("\n");
+
+      const privatePlans = p.plans
+        .filter((plan) => plan.type === "private")
+        .map((plan) => `- ${plan.duration} : *${plan.price}*`)
+        .join("\n");
+
+      const privateGaransi = p.plans
+        .filter((plan) => plan.type === "private-full")
+        .map((plan) => `- ${plan.duration} : *${plan.price}*`)
+        .join("\n");
+
+      const privateNonGaransi = p.plans
+        .filter((plan) => plan.type === "private-non-garansi")
+        .map((plan) => `- ${plan.duration} : *${plan.price}*`)
+        .join("\n");
+
+      if (lower === "vidio") {
+        plans = `Paket Sharing:\n${sharingPlans}\n\nPaket Private:\n${privatePlans}\n\n*Tonton tanpa iklan, kualitas HD, dan legal resmi dari Vidio!`;
+      } else if (lower === "spotify") {
+        plans = `Private Garansi Full\n${privateGaransi}\n\nPrivate Non Garansi\n${privateNonGaransi}`;
+      } else {
+        const sections = [];
+        if (sharingPlans) sections.push(`Sharing\n${sharingPlans}`);
+        if (privatePlans) sections.push(`Private\n${privatePlans}`);
+        plans = sections.join("\n\n");
+      }
     } else if (p.plans && Array.isArray(p.plans)) {
       plans = p.plans
         .map((plan) => {
