@@ -120,24 +120,43 @@
     ]
   },
   "loklok": {
-    "title": "LOKLOK Sharing",
+    "title": "LOKLOK Premium",
     "is_ready": true,
-    "description": "Untuk iOS dan Android",
+    "description": "",
     "plans": [
       {
-        "duration": "1 Bulan",
-        "price": "Rp 30.000"
+        "type": "Basic Plan - Sharing",
+        "details": [
+          "* 1 𝖻𝗎𝗅𝖺𝗇 𝗌𝗁𝖺𝗋𝗂𝗇𝗀 (6𝗎) ꠩ Rp 28.000",
+          "* 1 𝖻𝗎𝗅𝖺𝗇 𝗌𝗁𝖺𝗋𝗂𝗇𝗀 (4𝗎) ꠩ Rp 34.000",
+          "* 1 𝖻𝗎𝗅𝖺𝗇 𝗌𝗁𝖺𝗋𝗂𝗇𝗀 (3𝗎) ꠩ Rp 36.000"
+        ]
       },
       {
-        "duration": "2 Bulan",
-        "price": "Rp 55.000"
+        "type": "Basic Plan - Private",
+        "details": [
+          "* 1 𝖻𝗎𝗅𝖺𝗇 𝗉𝗋𝗂𝗏𝖺𝗍𝖾 ꠩ Rp 62.000"
+        ]
+      },
+      {
+        "type": "Standard Plan - Sharing",
+        "details": [
+          "* 1 𝖻𝗎𝗅𝖺𝗇 𝗌𝗁𝖺𝗋𝗂𝗇𝗀 (5𝗎) ꠩ Rp 33.000"
+        ]
+      },
+      {
+        "type": "Standard Plan - Private",
+        "details": [
+          "* 1 𝖻𝗎𝗅𝖺𝗇 𝗉𝗋𝗂𝗏𝖺𝗍𝖾 ꠩ Rp 74.000"
+        ]
       }
     ],
     "notes": [
-      "Garansi ON",
-      "Akun login seperti biasa",
-      "Dilarang ganti password",
-      "Tidak bisa login di TV"
+      "* Garansi ON",
+      "* Akun login seperti biasa",
+      "* Dilarang ganti password",
+      "* Basic Plan = Device HP/Laptop",
+      "* Standard Plan = Device TV"
     ]
   },
   "netflix": {
@@ -304,23 +323,19 @@
     "description": "",
     "plans": [
       {
-        "type": "Private (Akun Seller)",
+        "category": "ChatGPT Plus",
+        "type": "Sharing (Akun Seller)",
         "duration": "1 Bulan",
-        "price": "Rp 70.000"
+        "price": "Rp 55.000"
       },
       {
-        "type": "Private (Email Sendiri, SNK Berlaku)",
+        "category": "ChatGPT GO",
+        "type": "Private (Akun Seller)",
         "duration": "3 Bulan",
         "price": "Rp 155.000"
-      },
-      {
-        "type": "Sharing",
-        "duration": "1 Bulan",
-        "price": "Rp 25.000"
       }
     ],
     "notes": [
-      "* Produk yg tersedia adalah ChatGPT Go",
       "* Full Garansi BackFree",
       "* Garansi deactive 1× → replace account",
       "* Disarankan backup chat dan prompt secara berkala untuk mengantisipasi suspend akun."
