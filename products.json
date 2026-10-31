@@ -337,13 +337,13 @@
         "category": "ChatGPT Plus",
         "type": "Sharing (Akun Seller)",
         "duration": "1 Bulan",
-        "price": "Rp 38.000"
+        "price": "Rp 44.000"
       },
       {
         "category": "ChatGPT GO",
         "type": "Private (Akun Seller)",
         "duration": "3 Bulan",
-        "price": "Rp 155.000"
+        "price": "Rp 190.000"
       }
     ],
     "notes": [
@@ -352,7 +352,7 @@
       "* Disarankan backup chat dan prompt secara berkala untuk mengantisipasi suspend akun.",
       "Ketik Pay untuk pembelian produk"
     ],
-    "footer": "Cek perbedaan ChatGPT Go, Plus, Business, dan Pro:\nhttps://chatgpt.com/id-ID/pricing/"
+    "footer": "\nCek perbedaan ChatGPT Go, Plus, Business, dan Pro:\nhttps://chatgpt.com/id-ID/pricing/"
   },
   "gemini": {
     "title": "Gemini Ai Pro (BONUS VEO 3 + GDrive 2TB + NotebookLM)",
