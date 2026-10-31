@@ -95,6 +95,8 @@ const aliases = {
   "alight motion": "alightmotion",
   "we tv": "wetv",
   "lok lok": "loklok",
+  "claude ai": "claude",
+  claudeai: "claude",
 };
 
 async function startBot() {
@@ -275,6 +277,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
 
     if (
       lower === "chatgpt" ||
+      lower === "claude" ||
       lower === "loklok" ||
       lower === "we tv" ||
       lower === "wetv" ||
@@ -304,7 +307,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
 
       if (lower === "vidio") {
         plans = `Paket Sharing:\n${sharingPlans}\n\nPaket Private:\n${privatePlans}\n\n*Tonton tanpa iklan, kualitas HD, dan legal resmi dari Vidio!`;
-      } else if (lower === "chatgpt") {
+      } else if (lower === "chatgpt" || lower === "claude") {
         const grouped = {};
         p.plans.forEach((plan) => {
           const key = plan.category ? `${plan.category}\n${plan.type}` : plan.type;
@@ -359,7 +362,11 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
         .join("\n");
     }
     const notes = p.notes
-      .map((n) => (n.startsWith("*") || n.startsWith("•") ? n : `• ${n}`))
+      .map((n) =>
+        n.startsWith("*") || n.startsWith("•") || n.startsWith("-")
+          ? n
+          : `• ${n}`
+      )
       .join("\n");
     const notesAddition = p.notesAddition ? `\n*${p.notesAddition}` : "";
     const extendNotes = p.extended_notes
@@ -369,7 +376,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
     const featuresTitle = p.features_title ? `\n\n${p.features_title}` : "";
     let features = "";
     if (p.features) {
-      features = p.features.map((f) => `+ ${f}`).join("\n");
+      features = "\n" + p.features.map((f) => `+ ${f}`).join("\n");
     }
 
     let description = "";
@@ -382,7 +389,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
 
     await delay();
     await sock.sendMessage(from, {
-      text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}${notesAddition}${extendNotes}${forChatGpt}${footer}`,
+      text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}${features}${notesAddition}${extendNotes}${forChatGpt}${footer}`,
       quoted: {
         key: msg.key,
         message: msg.message,
@@ -405,7 +412,10 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
 
       let plans = "";
       if (
+        key === "chatgpt" ||
+        key === "claude" ||
         lower === "chatgpt" ||
+        lower === "claude" ||
         lower === "loklok" ||
         lower === "we tv" ||
         lower === "wetv" ||
@@ -433,23 +443,28 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
           .map((plan) => `- ${plan.duration} : *${plan.price}*`)
           .join("\n");
 
-        if (lower === "vidio") {
+        if (lower === "vidio" || key === "vidio") {
           plans = `Paket Sharing:\n${sharingPlans}\n\nPaket Private:\n${privatePlans}\n\n*Tonton tanpa iklan, kualitas HD, dan legal resmi dari Vidio!`;
-        } else if (lower === "chatgpt") {
+        } else if (
+          key === "chatgpt" ||
+          key === "claude" ||
+          lower === "chatgpt" ||
+          lower === "claude"
+        ) {
           const grouped = {};
           p.plans.forEach((plan) => {
-            const key = plan.category ? `${plan.category}\n${plan.type}` : plan.type;
-            if (!grouped[key]) grouped[key] = [];
-            grouped[key].push(`- ${plan.duration} : *${plan.price}*`);
+            const groupKey = plan.category ? `${plan.category}\n${plan.type}` : plan.type;
+            if (!grouped[groupKey]) grouped[groupKey] = [];
+            grouped[groupKey].push(`- ${plan.duration} : *${plan.price}*`);
           });
           plans = Object.keys(grouped)
             .map((type) => `${type}\n${grouped[type].join("\n")}`)
             .join("\n\n");
-        } else if (lower === "loklok") {
+        } else if (lower === "loklok" || key === "loklok") {
           plans = p.plans
             .map((plan) => `${plan.type}\n${plan.details.join("\n")}`)
             .join("\n\n");
-        } else if (lower === "spotify") {
+        } else if (lower === "spotify" || key === "spotify") {
           plans = `Private Garansi Full\n${privateGaransi}\n\nPrivate Non Garansi\n${privateNonGaransi}`;
         } else {
           const sections = [];
@@ -490,7 +505,11 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
           .join("\n");
       }
       const notes = p.notes
-        .map((n) => (n.startsWith("*") || n.startsWith("•") ? n : `• ${n}`))
+        .map((n) =>
+          n.startsWith("*") || n.startsWith("•") || n.startsWith("-")
+            ? n
+            : `• ${n}`
+        )
         .join("\n");
       const notesAddition = p.notesAddition ? `\n*${p.notesAddition}` : "";
       const extendNotes = p.extended_notes
@@ -500,7 +519,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       const featuresTitle = p.features_title ? `\n\n${p.features_title}` : "";
       let features = "";
       if (p.features) {
-        features = p.features.map((f) => `+ ${f}`).join("\n");
+        features = "\n" + p.features.map((f) => `+ ${f}`).join("\n");
       }
 
       let description = "";
@@ -524,7 +543,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
 
       await delay();
       await sock.sendMessage(from, {
-        text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}\n${features}${notesAddition}${extendNotes}${forChatGpt}${footer}`,
+        text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${featuresTitle}${features}${notesAddition}${extendNotes}${forChatGpt}${footer}`,
         quoted: {
           key: msg.key,
           message: msg.message,
@@ -536,6 +555,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
 
 async function handlePrivateMessage(sock, from, text, msg) {
   const lower = text.toLowerCase();
+  const key = aliases[lower] || lower;
 
   if (lower === "halo") {
     await delay();
@@ -559,29 +579,38 @@ async function handlePrivateMessage(sock, from, text, msg) {
         message: msg.message,
       },
     });
-  } else if (products[lower]) {
-    const p = products[lower];
+  } else if (products[key]) {
+    const p = products[key];
     let plans = "";
-    if (lower === "chatgpt") {
+    if (
+      key === "chatgpt" ||
+      key === "claude" ||
+      lower === "chatgpt" ||
+      lower === "claude"
+    ) {
       const grouped = {};
       p.plans.forEach((plan) => {
-        const key = plan.category ? `${plan.category}\n${plan.type}` : plan.type;
-        if (!grouped[key]) grouped[key] = [];
-        grouped[key].push(`- ${plan.duration} : *${plan.price}*`);
+        const groupKey = plan.category ? `${plan.category}\n${plan.type}` : plan.type;
+        if (!grouped[groupKey]) grouped[groupKey] = [];
+        grouped[groupKey].push(`- ${plan.duration} : *${plan.price}*`);
       });
       plans = Object.keys(grouped)
         .map((type) => `${type}\n${grouped[type].join("\n")}`)
         .join("\n\n");
-    } else if (lower === "loklok") {
+    } else if (lower === "loklok" || key === "loklok") {
       plans = p.plans
         .map((plan) => `${plan.type}\n${plan.details.join("\n")}`)
         .join("\n\n");
     } else if (
       lower === "we tv" ||
       lower === "wetv" ||
+      key === "wetv" ||
       lower === "vidio" ||
+      key === "vidio" ||
       lower === "spotify" ||
-      lower === "capcut"
+      key === "spotify" ||
+      lower === "capcut" ||
+      key === "capcut"
     ) {
       const sharingPlans = p.plans
         .filter((plan) => plan.type === "sharing")
@@ -603,9 +632,9 @@ async function handlePrivateMessage(sock, from, text, msg) {
         .map((plan) => `- ${plan.duration} : *${plan.price}*`)
         .join("\n");
 
-      if (lower === "vidio") {
+      if (lower === "vidio" || key === "vidio") {
         plans = `Paket Sharing:\n${sharingPlans}\n\nPaket Private:\n${privatePlans}\n\n*Tonton tanpa iklan, kualitas HD, dan legal resmi dari Vidio!`;
-      } else if (lower === "spotify") {
+      } else if (lower === "spotify" || key === "spotify") {
         plans = `Private Garansi Full\n${privateGaransi}\n\nPrivate Non Garansi\n${privateNonGaransi}`;
       } else {
         const sections = [];
@@ -633,13 +662,22 @@ async function handlePrivateMessage(sock, from, text, msg) {
         .join("\n");
     }
     const notes = p.notes
-      .map((n) => (n.startsWith("*") || n.startsWith("•") ? n : `• ${n}`))
+      .map((n) =>
+        n.startsWith("*") || n.startsWith("•") || n.startsWith("-")
+          ? n
+          : `• ${n}`
+      )
       .join("\n");
     const footer = p.footer ? `\n${p.footer}` : "";
 
+    let description = "";
+    if (p.description) {
+      description = `${p.description}\n\n`;
+    }
+
     await delay();
     await sock.sendMessage(from, {
-      text: `${p.title}\n\n${p.description}\n\n${plans}\n\nSyarat & Ketentuan:\n${notes}${footer}`,
+      text: `${p.title}\n\n${description}${plans}\n\nSyarat & Ketentuan:\n${notes}${footer}`,
       quoted: {
         key: msg.key,
         message: msg.message,
