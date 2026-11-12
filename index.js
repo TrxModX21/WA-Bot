@@ -283,6 +283,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
       lower === "wetv" ||
       lower === "vidio" ||
       lower === "spotify" ||
+      lower === "lightroom" ||
       lower === "capcut"
     ) {
       const sharingPlans = p.plans
@@ -421,6 +422,7 @@ async function handleGroupMessage(sock, from, sender, text, msg) {
         lower === "wetv" ||
         lower === "vidio" ||
         lower === "spotify" ||
+        lower === "lightroom" ||
         lower === "capcut"
       ) {
         const sharingPlans = p.plans
@@ -609,6 +611,8 @@ async function handlePrivateMessage(sock, from, text, msg) {
       key === "vidio" ||
       lower === "spotify" ||
       key === "spotify" ||
+      lower === "lightroom" ||
+      key === "lightroom" ||
       lower === "capcut" ||
       key === "capcut"
     ) {
