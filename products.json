@@ -341,15 +341,22 @@
       },
       {
         "category": "ChatGPT GO",
+        "type": "Sharing (Akun Seller)",
+        "duration": "1 Bulan",
+        "price": "Rp 25.000"
+      },
+      {
+        "category": "ChatGPT GO",
         "type": "Private (Akun Seller)",
         "duration": "3 Bulan",
         "price": "Rp 190.000"
       }
     ],
     "notes": [
-      "* Full Garansi BackFree",
-      "* Garansi deactive 1× → replace account",
-      "* Disarankan backup chat dan prompt secara berkala untuk mengantisipasi suspend akun.",
+      "Full Garansi BackFree",
+      "25 - 30 Hari dihitung 1 Bulan",
+      "Garansi deactive 1× → replace account",
+      "Disarankan backup chat dan prompt secara berkala untuk mengantisipasi suspend akun.",
       "Ketik Pay untuk pembelian produk"
     ],
     "footer": "\nCek perbedaan ChatGPT Go, Plus, Business, dan Pro:\nhttps://chatgpt.com/id-ID/pricing/"
